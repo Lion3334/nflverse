@@ -1,0 +1,16 @@
+[project]
+name = "nfl-matchup-lab"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["nflreadpy>=0.1", "streamlit>=1.40", "polars>=1.0"]
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["metrics", "app"]
