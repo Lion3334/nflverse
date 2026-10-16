@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provider": "Open-Meteo",
-  "attempted_at": "2026-10-16T19:38:39+00:00",
+  "attempted_at": "2026-10-16T19:55:18+00:00",
   "forecast_days": 16,
   "games": {
     "2026_01_NE_SEA": {
@@ -727,254 +727,590 @@
     "2026_06_HOU_JAX": {
       "stadium": "Wembley Stadium",
       "kickoff": "2026-10-18T13:30:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T13:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 53.8,
+        "feels_like_f": 46.1,
+        "precipitation_probability": 16,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 12.3,
+        "gust_mph": 25.3,
+        "wind_direction_degrees": 2,
+        "conditions": "Overcast"
+      },
       "latitude": 51.556,
       "longitude": -0.2796,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_BAL_CLE": {
       "stadium": "Huntington Bank Field",
       "kickoff": "2026-10-18T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 57.1,
+        "feels_like_f": 50.6,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 5.8,
+        "gust_mph": 5.6,
+        "wind_direction_degrees": 196,
+        "conditions": "Clear"
+      },
       "latitude": 41.5061,
       "longitude": -81.6995,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_CAR_PHI": {
       "stadium": "Lincoln Financial Field",
       "kickoff": "2026-10-18T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 56.3,
+        "feels_like_f": 47.9,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 10.2,
+        "gust_mph": 17.9,
+        "wind_direction_degrees": 40,
+        "conditions": "Clear"
+      },
       "latitude": 39.9008,
       "longitude": -75.1675,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_CHI_ATL": {
       "stadium": "Mercedes-Benz Stadium",
       "kickoff": "2026-10-18T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 63.4,
+        "feels_like_f": 55.5,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 11.0,
+        "gust_mph": 12.8,
+        "wind_direction_degrees": 70,
+        "conditions": "Clear"
+      },
       "latitude": 33.7554,
       "longitude": -84.4008,
       "roof": "retractable",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_NO_NYG": {
       "stadium": "MetLife Stadium",
       "kickoff": "2026-10-18T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 55.4,
+        "feels_like_f": 47.8,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 7.5,
+        "gust_mph": 16.6,
+        "wind_direction_degrees": 53,
+        "conditions": "Clear"
+      },
       "latitude": 40.8135,
       "longitude": -74.0745,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_NYJ_NE": {
       "stadium": "Gillette Stadium",
       "kickoff": "2026-10-18T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 51.2,
+        "feels_like_f": 45.0,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 6.1,
+        "gust_mph": 13.4,
+        "wind_direction_degrees": 54,
+        "conditions": "Clear"
+      },
       "latitude": 42.0909,
       "longitude": -71.2643,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_PIT_TB": {
       "stadium": "Raymond James Stadium",
       "kickoff": "2026-10-18T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 76.8,
+        "feels_like_f": 73.4,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 17.4,
+        "gust_mph": 19.5,
+        "wind_direction_degrees": 49,
+        "conditions": "Clear"
+      },
       "latitude": 27.9759,
       "longitude": -82.5033,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_TEN_IND": {
       "stadium": "Lucas Oil Stadium",
       "kickoff": "2026-10-18T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 58.5,
+        "feels_like_f": 52.3,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 6.0,
+        "gust_mph": 9.8,
+        "wind_direction_degrees": 158,
+        "conditions": "Clear"
+      },
       "latitude": 39.7601,
       "longitude": -86.1639,
       "roof": "retractable",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_ARI_LA": {
       "stadium": "SoFi Stadium",
       "kickoff": "2026-10-18T20:05:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T20:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 80.2,
+        "feels_like_f": 77.1,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 9.6,
+        "gust_mph": 5.1,
+        "wind_direction_degrees": 249,
+        "conditions": "Clear"
+      },
       "latitude": 33.9535,
       "longitude": -118.3392,
       "roof": "covered_open_sides",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_BUF_LV": {
       "stadium": "Allegiant Stadium",
       "kickoff": "2026-10-18T20:25:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T20:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 73.6,
+        "feels_like_f": 70.5,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 1,
+        "wind_mph": 4.3,
+        "gust_mph": 2.0,
+        "wind_direction_degrees": 111,
+        "conditions": "Mostly clear"
+      },
       "latitude": 36.0909,
       "longitude": -115.1833,
       "roof": "indoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_LAC_KC": {
       "stadium": "GEHA Field at Arrowhead Stadium",
       "kickoff": "2026-10-18T20:25:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-18T20:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 65.1,
+        "feels_like_f": 58.1,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 12.5,
+        "gust_mph": 16.6,
+        "wind_direction_degrees": 196,
+        "conditions": "Clear"
+      },
       "latitude": 39.0489,
       "longitude": -94.4839,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_DAL_GB": {
       "stadium": "Lambeau Field",
       "kickoff": "2026-10-19T00:20:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-19T00:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 52.7,
+        "feels_like_f": 44.1,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 14.0,
+        "gust_mph": 30.4,
+        "wind_direction_degrees": 207,
+        "conditions": "Clear"
+      },
       "latitude": 44.5013,
       "longitude": -88.0622,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_06_WAS_SF": {
       "stadium": "Levi's Stadium",
       "kickoff": "2026-10-20T00:15:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-20T00:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 65.2,
+        "feels_like_f": 58.5,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 9.9,
+        "gust_mph": 10.3,
+        "wind_direction_degrees": 321,
+        "conditions": "Overcast"
+      },
       "latitude": 37.403,
       "longitude": -121.97,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_NE_CHI": {
       "stadium": "Soldier Field",
       "kickoff": "2026-10-23T00:15:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-23T00:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 66.9,
+        "feels_like_f": 62.3,
+        "precipitation_probability": 1,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 4.6,
+        "gust_mph": 7.6,
+        "wind_direction_degrees": 209,
+        "conditions": "Clear"
+      },
       "latitude": 41.8623,
       "longitude": -87.6167,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_PIT_NO": {
       "stadium": "Stade de France",
       "kickoff": "2026-10-25T13:30:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T13:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 57.9,
+        "feels_like_f": 54.1,
+        "precipitation_probability": 9,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 7.1,
+        "gust_mph": 17.0,
+        "wind_direction_degrees": 172,
+        "conditions": "Overcast"
+      },
       "latitude": 48.9245,
       "longitude": 2.3601,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_CIN_BAL": {
       "stadium": "M&T Bank Stadium",
       "kickoff": "2026-10-25T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 58.0,
+        "feels_like_f": 51.9,
+        "precipitation_probability": 4,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 6.9,
+        "gust_mph": 16.1,
+        "wind_direction_degrees": 36,
+        "conditions": "Clear"
+      },
       "latitude": 39.278,
       "longitude": -76.6227,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_CLE_TEN": {
       "stadium": "Nissan Stadium",
       "kickoff": "2026-10-25T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 74.9,
+        "feels_like_f": 72.1,
+        "precipitation_probability": 3,
+        "precipitation_inches": 0.0,
+        "weather_code": 1,
+        "wind_mph": 6.9,
+        "gust_mph": 2.2,
+        "wind_direction_degrees": 199,
+        "conditions": "Mostly clear"
+      },
       "latitude": 36.1665,
       "longitude": -86.7713,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_IND_MIN": {
       "stadium": "U.S. Bank Stadium",
       "kickoff": "2026-10-25T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 55.2,
+        "feels_like_f": 49.7,
+        "precipitation_probability": 13,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 8.4,
+        "gust_mph": 10.7,
+        "wind_direction_degrees": 299,
+        "conditions": "Overcast"
+      },
       "latitude": 44.9738,
       "longitude": -93.2575,
       "roof": "indoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_MIA_NYJ": {
       "stadium": "MetLife Stadium",
       "kickoff": "2026-10-25T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 55.5,
+        "feels_like_f": 47.9,
+        "precipitation_probability": 5,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 8.5,
+        "gust_mph": 13.0,
+        "wind_direction_degrees": 27,
+        "conditions": "Clear"
+      },
       "latitude": 40.8135,
       "longitude": -74.0745,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_NYG_HOU": {
       "stadium": "Reliant Stadium",
       "kickoff": "2026-10-25T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 81.6,
+        "feels_like_f": 80.9,
+        "precipitation_probability": 5,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 9.8,
+        "gust_mph": 11.4,
+        "wind_direction_degrees": 110,
+        "conditions": "Clear"
+      },
       "latitude": 29.6847,
       "longitude": -95.4107,
       "roof": "retractable",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_SF_ATL": {
       "stadium": "Mercedes-Benz Stadium",
       "kickoff": "2026-10-25T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 67.7,
+        "feels_like_f": 63.7,
+        "precipitation_probability": 1,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 8.5,
+        "gust_mph": 13.0,
+        "wind_direction_degrees": 88,
+        "conditions": "Clear"
+      },
       "latitude": 33.7554,
       "longitude": -84.4008,
       "roof": "retractable",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_TB_CAR": {
       "stadium": "Bank of America Stadium",
       "kickoff": "2026-10-25T17:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T17:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 63.8,
+        "feels_like_f": 59.4,
+        "precipitation_probability": 3,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 7.4,
+        "gust_mph": 25.5,
+        "wind_direction_degrees": 41,
+        "conditions": "Clear"
+      },
       "latitude": 35.2258,
       "longitude": -80.8528,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_DEN_ARI": {
       "stadium": "State Farm Stadium",
       "kickoff": "2026-10-25T20:05:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T20:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 78.9,
+        "feels_like_f": 74.7,
+        "precipitation_probability": 1,
+        "precipitation_inches": 0.0,
+        "weather_code": 1,
+        "wind_mph": 5.2,
+        "gust_mph": 4.9,
+        "wind_direction_degrees": 70,
+        "conditions": "Mostly clear"
+      },
       "latitude": 33.5276,
       "longitude": -112.2626,
       "roof": "retractable",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_GB_DET": {
       "stadium": "Ford Field",
       "kickoff": "2026-10-25T20:25:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T20:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 65.2,
+        "feels_like_f": 59.4,
+        "precipitation_probability": 3,
+        "precipitation_inches": 0.0,
+        "weather_code": 1,
+        "wind_mph": 8.1,
+        "gust_mph": 8.1,
+        "wind_direction_degrees": 166,
+        "conditions": "Mostly clear"
+      },
       "latitude": 42.34,
       "longitude": -83.0456,
       "roof": "indoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_LA_LV": {
       "stadium": "Allegiant Stadium",
       "kickoff": "2026-10-25T20:25:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-25T20:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 68.5,
+        "feels_like_f": 64.7,
+        "precipitation_probability": 0,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 5.4,
+        "gust_mph": 6.0,
+        "wind_direction_degrees": 52,
+        "conditions": "Clear"
+      },
       "latitude": 36.0909,
       "longitude": -115.1833,
       "roof": "indoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_KC_SEA": {
       "stadium": "Lumen Field",
       "kickoff": "2026-10-26T00:20:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-26T00:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 57.6,
+        "feels_like_f": 51.2,
+        "precipitation_probability": 8,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 7.2,
+        "gust_mph": 6.7,
+        "wind_direction_degrees": 356,
+        "conditions": "Clear"
+      },
       "latitude": 47.5952,
       "longitude": -122.3316,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_07_DAL_PHI": {
       "stadium": "Lincoln Financial Field",
       "kickoff": "2026-10-27T00:15:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-27T00:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 57.7,
+        "feels_like_f": 51.5,
+        "precipitation_probability": 7,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 5.4,
+        "gust_mph": 2.9,
+        "wind_direction_degrees": 218,
+        "conditions": "Overcast"
+      },
       "latitude": 39.9008,
       "longitude": -75.1675,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_08_CAR_GB": {
       "stadium": "Lambeau Field",
       "kickoff": "2026-10-30T00:15:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-10-30T00:00:00+00:00",
+        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "temperature_f": 52.8,
+        "feels_like_f": 45.5,
+        "precipitation_probability": 10,
+        "precipitation_inches": 0.008,
+        "weather_code": 51,
+        "wind_mph": 13.8,
+        "gust_mph": 20.1,
+        "wind_direction_degrees": 279,
+        "conditions": "Light drizzle"
+      },
       "latitude": 44.5013,
       "longitude": -88.0622,
       "roof": "outdoor",
-      "status": "fetch_failed"
+      "status": "available"
     },
     "2026_08_ARI_DAL": {
       "stadium": "AT&T Stadium",
@@ -2454,7 +2790,7 @@
     }
   },
   "coverage": {
-    "fetch_failed": 28,
+    "available": 28,
     "outside_horizon": 164,
     "past_unavailable": 80
   }
