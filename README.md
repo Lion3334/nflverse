@@ -20,11 +20,30 @@ For a hosted site, enable **Settings → Pages → Deploy from a branch → main
 
 ## Matchups and the current week
 
-The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows two compact possession tables (Total/Pass/Rush columns, offense/defense rows), a 2×2 special teams table (team rows, possession/opponent columns), team logos, saved FanDuel spread/total panels, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. The header groups kickoff and venue beside the teams on the left, with FanDuel opening/latest spread and total panels on the right. A reserved “Weather at kickoff” area beside the time/venue has temperature, wind, and precipitation slots; it explicitly says “Forecast not connected” until a weather source is integrated. On small screens these header groups stack. Bye teams are listed below the slate.
+The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows two compact possession tables (Total/Pass/Rush columns, offense/defense rows), a 2×2 special teams table (team rows, possession/opponent columns), team logos, saved FanDuel spread/total panels, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. The header groups kickoff and venue beside the teams on the left, with FanDuel opening/latest spread and total panels on the right. The kickoff-weather area displays saved Open-Meteo conditions, temperature/feels-like, wind/gusts, and precipitation forecasts, or an explicit unavailable state. On small screens these header groups stack. Bye teams are listed below the slate.
 
 The opening week is calculated in the browser at visit time, not at build time. NFL weeks roll over **Tuesday at midnight America/New_York**, using the first scheduled game of each week to locate that Tuesday. October 16, 2026 selects Week 6. Before the season, Week 1 is selected; after the published season, the final week is selected. Explicit week links preserve the chosen week. The page also checks for a new week while left open.
 
 The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. Matchup cells show the selected EPA value and league rank, with a continuous rank-based heat map (green = stronger, red = weaker). Defense and opponent-side special teams use lower-is-better ranks. On mobile the tables stack. EPA data remains through Week 5: Weeks 1–5 leave matchup EPA unavailable to avoid hindsight; Week 6 and later clearly label the saved through-Week-5 snapshot. Historical pregame snapshots have not been generated. The metric selector is shared with the leaderboard and persists in links. Old leaderboard links still work.
+
+## Kickoff weather
+
+[Open-Meteo](https://open-meteo.com/) forecasts are requested server-side at approximate stadium-center coordinates from `venue_weather.py`, including international venues. No API key is required for the free personal/non-commercial API. Weather is refreshed with the **4 a.m./4 p.m. Pacific** workflow slots, independently of odds credentials; the Sunday opening-only odds job does not request weather. The static page makes no external API calls.
+
+```sh
+.venv/bin/python export_weather.py
+python build_site.py
+```
+
+The updater batches the unique stadium locations for upcoming games within the provider's 16-day UTC forecast window. It selects the nearest hourly forecast within 30 minutes of kickoff (half-hour ties use the earlier hour). Times are matched in UTC and displayed in the visitor's timezone. Temperature and feels-like use °F, wind/gusts mph, and precipitation inches (liquid-water equivalent), with probability in percent. Weather conditions follow Open-Meteo WMO codes. Missing fields display as unavailable, never zero-filled. Forecast retrieval time is visible; hovering the weather box gives the selected forecast hour.
+
+Indoor stadiums explicitly label this as **outside weather, not field conditions**. Retractable roofs show **roof status unknown**; their position is not inferred. SoFi is labeled covered with open sides. Coordinates and structural roof types are maintained locally, not inferred from home teams. The API may use a nearby weather-model grid point rather than the exact coordinate.
+
+Past games keep their last saved pregame forecast if available; they never receive a new forecast after kickoff. Games with no saved pregame forecast say so. Distant games, unknown venues/times, and failed requests have distinct unavailable states. Failed refreshes preserve older forecasts with a warning, provided kickoff and venue still match. Snapshot state is stored in `reports/weather_2026.json` and embedded in the HTML.
+
+**Initial cloud validation:** the request was blocked by this environment's network proxy, so the first snapshot contains unavailable states, not fabricated weather. The network draft now includes **`api.open-meteo.com`**; save/publish that setting and rerun the exporter to validate live data. Network failure states, successful synthetic response handling, time matching, and the UI were tested independently. The GitHub runner uses its own outbound networking and can refresh weather without the cloud allowlist or odds API key.
+
+Attribution: weather data by [Open-Meteo](https://open-meteo.com/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The product footer includes these links.
 
 ## FanDuel betting quotes and refresh schedule
 
@@ -41,8 +60,8 @@ The checked-in [GitHub Actions workflow](.github/workflows/refresh-odds.yml) use
 
 ### Activate on GitHub
 
-1. Under **repository Settings → Secrets and variables → Actions**, create repository secret **`ODDS_API_KEY`** with your API key. The cloud environment secret does **not** automatically transfer to GitHub. Never put the value in chat, HTML, source code, or command-line arguments.
-2. Ensure Actions are enabled and workflow pushes to `main` are permitted by repository rules. In **Actions → Refresh FanDuel NFL odds**, use **Run workflow** to verify GitHub-side access. This session's GitHub API access did not permit checking secret names or starting a remote run; local credentials and scheduled execution are distinct.
+1. Under **repository Settings → Secrets and variables → Actions**, create repository secret **`ODDS_API_KEY`** with your API key. The cloud environment secret does **not** automatically transfer to GitHub. Weather updates can run without this secret; only odds requests require it. Never put the value in chat, HTML, source code, or command-line arguments.
+2. Ensure Actions are enabled and workflow pushes to `main` are permitted by repository rules. In **Actions → Refresh NFL odds and weather**, use **Run workflow** to verify GitHub-side access. This session's GitHub API access did not permit checking secret names or starting a remote run; local credentials and scheduled execution are distinct.
 3. For automatic hosting updates, enable Pages with **GitHub Actions** as the build source and create Actions repository variable **`PUBLISH_PAGES=true`**. The optional deploy job uploads `docs/` and deploys it explicitly. A `GITHUB_TOKEN` commit alone does not trigger branch-based Pages builds. Without that variable, snapshots and HTML still update in the repo; no deployment is claimed.
 
 Each normal refresh currently costs two credits (two markets). Twice daily uses about **4 credits/day**, plus **2 for the weekly opening pull**. The first FanDuel pull left 486 credits remaining. No historical paid endpoint is required for forward collection.
@@ -56,7 +75,7 @@ python build_site.py
 .venv/bin/python export_odds.py --capture-opening
 ```
 
-The build embeds sanitized `reports/odds_2026.json` in the HTML. Keep this file between runs: it preserves opening, first-observed, and latest quote history per game/market. The browser makes no API calls and contains no API key. Refresh failures preserve the prior file. Events map by both teams and kickoff within 24 hours; ambiguous matches are skipped. Home-negative points mean home favored, unlike nflverse's spread convention. The UI shows the favored team's spread or Pick’em, and totals as O/U. Schedule/EPA data remain separate snapshots and are not refreshed by the odds job.
+The build embeds sanitized `reports/odds_2026.json` in the HTML. Keep this file between runs: it preserves opening, first-observed, and latest quote history per game/market. The browser makes no API calls and contains no API key. Refresh failures preserve the prior file. Events map by both teams and kickoff within 24 hours; ambiguous matches are skipped. Home-negative points mean home favored, unlike nflverse's spread convention. The UI shows the favored team's spread or Pick’em, and totals as O/U. Schedule/EPA data remain separate snapshots and are not refreshed by this job. Weather is captured independently on latest-line refresh slots, so an odds credential or request failure does not discard the weather refresh.
 
 ## Rebuild the site
 
@@ -107,6 +126,7 @@ Exports produce the reviewable Markdown/CSV EPA snapshots and `schedule_2026.jso
 .venv/bin/python tests/browser/check_matchups.py
 .venv/bin/python tests/browser/check_odds.py
 .venv/bin/python tests/browser/check_matchup_tables.py
+.venv/bin/python tests/browser/check_weather.py
 ```
 
 The leaderboard browser check serves the static site temporarily and verifies all 24 dimension/metric combinations, exact linear horizontal positions, label separation, correct sorting, keyboard interaction, team highlighting, CSV download, URL state, and mobile overflow.
@@ -120,3 +140,5 @@ The three-table browser check verifies all 224 Week 6 cells across all three met
 ## Logos
 
 All 32 team logos are bundled as original PNGs from nflverse/nflplotR and embedded in the standalone HTML, so they work offline without CDN access. The build verifies their SHA-256 checksums. See [logo source and attribution](web/assets/logos/README.md) and [source manifest](web/assets/logos/sources.json). Team marks belong to their respective owners.
+
+Weather tests cover UTC/hour selection, unit validation, international venue mapping, deduplication, roof classifications, past/future windows, stale forecast preservation, changed kickoff invalidation, null fields, network failures, browser units/conditions/timestamps, and no client-side API requests.

@@ -1,4 +1,4 @@
-name: Refresh FanDuel NFL odds
+name: Refresh NFL odds and weather
 on:
   workflow_dispatch:
   schedule:
@@ -33,6 +33,9 @@ jobs:
       - name: Install odds updater dependency
         if: steps.gate.outputs.run == 'true'
         run: python -m pip install 'requests>=2.28'
+      - name: Capture kickoff weather independently of odds credentials
+        if: steps.gate.outputs.run == 'true' && steps.gate.outputs.mode == 'latest'
+        run: python export_weather.py
       - name: Capture FanDuel snapshot
         if: steps.gate.outputs.run == 'true'
         env:
@@ -40,13 +43,11 @@ jobs:
           CAPTURE_MODE: ${{ steps.gate.outputs.mode }}
         run: |
           if [ -z "$ODDS_API_KEY" ]; then
-            echo '::error::Add ODDS_API_KEY under repository Settings > Secrets and variables > Actions.'
-            exit 1
-          fi
-          if [ "$CAPTURE_MODE" = 'opening' ]; then
-            python export_odds.py --capture-opening
+            echo '::warning::ODDS_API_KEY is missing; refreshing weather only. Add the Actions secret to enable odds.'
+          elif [ "$CAPTURE_MODE" = 'opening' ]; then
+            python export_odds.py --capture-opening || echo '::warning::Odds refresh failed; retaining prior odds.'
           else
-            python export_odds.py
+            python export_odds.py || echo '::warning::Odds refresh failed; retaining prior odds.'
           fi
           python build_site.py
       - name: Commit refreshed snapshot and HTML
@@ -56,9 +57,9 @@ jobs:
           echo 'changed=false' >> "$GITHUB_OUTPUT"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/odds_2026.json docs/index.html
+          git add reports/odds_2026.json reports/weather_2026.json docs/index.html
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Refresh FanDuel NFL odds snapshot'
+          git commit -m 'Refresh NFL odds and weather snapshots'
           git push origin HEAD:main
           echo 'changed=true' >> "$GITHUB_OUTPUT"
   # Optional: repository variable PUBLISH_PAGES=true enables explicit Pages deployment.

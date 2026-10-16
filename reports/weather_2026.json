@@ -1,0 +1,2461 @@
+{
+  "schema_version": 1,
+  "provider": "Open-Meteo",
+  "attempted_at": "2026-10-16T19:38:39+00:00",
+  "forecast_days": 16,
+  "games": {
+    "2026_01_NE_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-09-10T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_SF_LA": {
+      "stadium": "Melbourne Cricket Ground",
+      "kickoff": "2026-09-11T00:35:00+00:00",
+      "forecast": null,
+      "latitude": -37.82,
+      "longitude": 144.9834,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_ATL_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_BAL_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_01_BUF_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_01_CHI_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_CLE_JAX": {
+      "stadium": "EverBank Stadium",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 30.3239,
+      "longitude": -81.6373,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_NO_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_NYJ_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_TB_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_ARI_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "past_unavailable"
+    },
+    "2026_01_GB_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_MIA_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_WAS_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_DAL_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-09-14T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_01_DEN_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2026-09-15T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_DET_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2026-09-18T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_CAR_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_02_CIN_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_02_CLE_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_GB_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_MIN_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_NO_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_PHI_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_PIT_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_JAX_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2026-09-20T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_LV_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-09-20T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "past_unavailable"
+    },
+    "2026_02_MIA_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2026-09-20T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_SEA_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2026-09-20T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_02_WAS_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2026-09-20T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_02_IND_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2026-09-21T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_02_NYG_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-09-22T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "past_unavailable"
+    },
+    "2026_03_ATL_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2026-09-25T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_CAR_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_CIN_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_HOU_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_03_KC_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_LAC_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_NE_JAX": {
+      "stadium": "EverBank Stadium",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 30.3239,
+      "longitude": -81.6373,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_NYJ_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_SEA_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_TEN_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_ARI_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2026-09-27T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_MIN_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-09-27T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_BAL_DAL": {
+      "stadium": "Maracana Stadium",
+      "kickoff": "2026-09-27T20:25:00+00:00",
+      "forecast": null,
+      "latitude": -22.9121,
+      "longitude": -43.2302,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_LV_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2026-09-27T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_LA_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2026-09-28T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_03_PHI_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-09-29T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_PIT_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2026-10-02T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_IND_WAS": {
+      "stadium": "Tottenham Hotspur Stadium",
+      "kickoff": "2026-10-04T13:30:00+00:00",
+      "forecast": null,
+      "latitude": 51.6043,
+      "longitude": -0.0664,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_ARI_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_DAL_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_04_GB_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_JAX_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_LA_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_NE_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_NYJ_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_TEN_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_MIA_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-10-04T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_DEN_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2026-10-04T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_KC_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-10-04T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_LAC_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-10-04T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_DET_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2026-10-05T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_04_ATL_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2026-10-06T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_TB_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2026-10-09T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_05_PHI_JAX": {
+      "stadium": "Tottenham Hotspur Stadium",
+      "kickoff": "2026-10-11T13:30:00+00:00",
+      "forecast": null,
+      "latitude": 51.6043,
+      "longitude": -0.0664,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_CHI_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_CIN_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_CLE_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_HOU_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_IND_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_LV_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_MIN_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_NYG_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_DEN_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-10-11T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "past_unavailable"
+    },
+    "2026_05_DET_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2026-10-11T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_05_SF_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-10-11T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_05_BAL_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2026-10-12T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "past_unavailable"
+    },
+    "2026_05_BUF_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-10-13T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "past_unavailable"
+    },
+    "2026_06_SEA_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2026-10-16T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "past_unavailable"
+    },
+    "2026_06_HOU_JAX": {
+      "stadium": "Wembley Stadium",
+      "kickoff": "2026-10-18T13:30:00+00:00",
+      "forecast": null,
+      "latitude": 51.556,
+      "longitude": -0.2796,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_BAL_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_CAR_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_CHI_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "fetch_failed"
+    },
+    "2026_06_NO_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_NYJ_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_PIT_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_TEN_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "fetch_failed"
+    },
+    "2026_06_ARI_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-10-18T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "fetch_failed"
+    },
+    "2026_06_BUF_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-10-18T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_LAC_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2026-10-18T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_DAL_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2026-10-19T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_06_WAS_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2026-10-20T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_NE_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-10-23T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_PIT_NO": {
+      "stadium": "Stade de France",
+      "kickoff": "2026-10-25T13:30:00+00:00",
+      "forecast": null,
+      "latitude": 48.9245,
+      "longitude": 2.3601,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_CIN_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_CLE_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_IND_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_MIA_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_NYG_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "fetch_failed"
+    },
+    "2026_07_SF_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "fetch_failed"
+    },
+    "2026_07_TB_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_DEN_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2026-10-25T20:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "fetch_failed"
+    },
+    "2026_07_GB_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-10-25T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_LA_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-10-25T20:25:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_KC_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-10-26T00:20:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_07_DAL_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-10-27T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_08_CAR_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2026-10-30T00:15:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "fetch_failed"
+    },
+    "2026_08_ARI_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_08_ATL_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_BAL_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_CLE_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_IND_JAX": {
+      "stadium": "EverBank Stadium",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 30.3239,
+      "longitude": -81.6373,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_LV_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_MIN_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_TEN_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_LAC_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-11-01T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_08_KC_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2026-11-01T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_NE_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2026-11-01T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_PHI_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2026-11-02T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_08_CHI_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-11-03T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_JAX_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2026-11-06T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_CIN_ATL": {
+      "stadium": "Bernabeu",
+      "kickoff": "2026-11-08T14:30:00+00:00",
+      "forecast": null,
+      "latitude": 40.4531,
+      "longitude": -3.6883,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_09_CLE_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_DAL_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_09_DEN_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_DET_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_LA_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_NYG_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_NYJ_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_HOU_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-11-08T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_09_LV_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2026-11-08T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_ARI_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-11-08T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_GB_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2026-11-08T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_TB_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-11-09T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_09_BUF_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-11-10T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_WAS_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-11-13T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_NE_DET": {
+      "stadium": "FC Bayern Munich Stadium",
+      "kickoff": "2026-11-15T14:30:00+00:00",
+      "forecast": null,
+      "latitude": 48.2188,
+      "longitude": 11.6247,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_BUF_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_CAR_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_HOU_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_JAX_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_KC_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_10_MIA_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_10_MIN_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_LA_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2026-11-15T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_10_SEA_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-11-15T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_SF_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2026-11-15T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_10_PIT_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2026-11-16T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_10_LAC_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2026-11-17T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_IND_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2026-11-20T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_11_ARI_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_BAL_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_JAX_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_MIA_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_NO_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_TB_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_TEN_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_11_NYJ_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-11-22T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_11_LV_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2026-11-22T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_PIT_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-11-22T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_MIN_SF": {
+      "stadium": "Estadio Banorte",
+      "kickoff": "2026-11-23T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 19.3029,
+      "longitude": -99.1505,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_11_CIN_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2026-11-24T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_GB_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-11-26T01:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_12_CHI_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-11-26T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_PHI_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2026-11-26T21:30:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_12_KC_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2026-11-27T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_DEN_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_ATL_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_BAL_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_12_LV_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_NO_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_NYG_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_12_NYJ_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_TEN_JAX": {
+      "stadium": "EverBank Stadium",
+      "kickoff": "2026-11-29T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 30.3239,
+      "longitude": -81.6373,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_SEA_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2026-11-29T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_12_WAS_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2026-11-29T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_12_NE_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-11-30T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_12_CAR_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-12-01T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_KC_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-12-04T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_13_CIN_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_DET_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_13_GB_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_JAX_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_LAC_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_SF_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_WAS_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_MIA_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2026-12-06T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_PHI_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2026-12-06T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_13_BUF_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2026-12-06T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_CAR_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-12-06T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_HOU_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-12-07T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_13_DAL_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-12-08T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_MIN_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2026-12-11T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_ATL_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_CHI_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_DEN_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_HOU_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_IND_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_NO_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_TB_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_TEN_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_LAC_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-12-13T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_KC_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2026-12-13T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_LA_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2026-12-13T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_NYG_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-12-13T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_BUF_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2026-12-14T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_14_PIT_JAX": {
+      "stadium": "EverBank Stadium",
+      "kickoff": "2026-12-15T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 30.3239,
+      "longitude": -81.6373,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_SF_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-12-18T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_15_SEA_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-12-19T22:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_CHI_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2026-12-20T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_ATL_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_BAL_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_CIN_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_CLE_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_IND_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_JAX_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_15_MIA_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_NO_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_NYJ_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2026-12-20T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_15_DAL_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2026-12-20T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_15_DEN_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-12-20T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_DET_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-12-21T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_15_NE_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2026-12-22T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_HOU_PHI": {
+      "stadium": "Lincoln Financial Field",
+      "kickoff": "2026-12-25T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.9008,
+      "longitude": -75.1675,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_GB_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2026-12-25T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_BUF_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2026-12-25T21:30:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_LA_SEA": {
+      "stadium": "Lumen Field",
+      "kickoff": "2026-12-26T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 47.5952,
+      "longitude": -122.3316,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_ARI_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_CAR_PIT": {
+      "stadium": "Acrisure Stadium",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.4468,
+      "longitude": -80.0158,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_CIN_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_16_CLE_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_LAC_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_NE_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_TB_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_16_WAS_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_TEN_LV": {
+      "stadium": "Allegiant Stadium",
+      "kickoff": "2026-12-27T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 36.0909,
+      "longitude": -115.1833,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_SF_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2026-12-27T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_16_JAX_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2026-12-28T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_16_NYG_DET": {
+      "stadium": "Ford Field",
+      "kickoff": "2026-12-29T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 42.34,
+      "longitude": -83.0456,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_BAL_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2027-01-01T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_BUF_MIA": {
+      "stadium": "Hard Rock Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 25.958,
+      "longitude": -80.2389,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_DEN_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_IND_CLE": {
+      "stadium": "Huntington Bank Field",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 41.5061,
+      "longitude": -81.6995,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_KC_LAC": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_17_LA_TB": {
+      "stadium": "Raymond James Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 27.9759,
+      "longitude": -82.5033,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_MIN_NYJ": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_NO_ATL": {
+      "stadium": "Mercedes-Benz Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.7554,
+      "longitude": -84.4008,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_17_NYG_DAL": {
+      "stadium": "AT&T Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 32.7473,
+      "longitude": -97.0945,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_17_PIT_TEN": {
+      "stadium": "Nissan Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 36.1665,
+      "longitude": -86.7713,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_SEA_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_WAS_JAX": {
+      "stadium": "EverBank Stadium",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 30.3239,
+      "longitude": -81.6373,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_LV_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2027-01-03T21:05:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_17_DET_CHI": {
+      "stadium": "Soldier Field",
+      "kickoff": "2027-01-03T21:25:00+00:00",
+      "forecast": null,
+      "latitude": 41.8623,
+      "longitude": -87.6167,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_PHI_SF": {
+      "stadium": "Levi's Stadium",
+      "kickoff": "2027-01-04T01:20:00+00:00",
+      "forecast": null,
+      "latitude": 37.403,
+      "longitude": -121.97,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_17_HOU_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2027-01-05T01:15:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_ATL_CAR": {
+      "stadium": "Bank of America Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 35.2258,
+      "longitude": -80.8528,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_CHI_MIN": {
+      "stadium": "U.S. Bank Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.9738,
+      "longitude": -93.2575,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_CLE_CIN": {
+      "stadium": "Paycor Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0954,
+      "longitude": -84.516,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_DAL_WAS": {
+      "stadium": "Northwest Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 38.9076,
+      "longitude": -76.8645,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_DET_GB": {
+      "stadium": "Lambeau Field",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 44.5013,
+      "longitude": -88.0622,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_JAX_IND": {
+      "stadium": "Lucas Oil Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7601,
+      "longitude": -86.1639,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_18_LAC_DEN": {
+      "stadium": "Empower Field at Mile High",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.7439,
+      "longitude": -105.0201,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_LV_KC": {
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.0489,
+      "longitude": -94.4839,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_MIA_NE": {
+      "stadium": "Gillette Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.0909,
+      "longitude": -71.2643,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_NYJ_BUF": {
+      "stadium": "Highmark Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 42.7747,
+      "longitude": -78.7936,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_PHI_NYG": {
+      "stadium": "MetLife Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 40.8135,
+      "longitude": -74.0745,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_PIT_BAL": {
+      "stadium": "M&T Bank Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 39.278,
+      "longitude": -76.6227,
+      "roof": "outdoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_SEA_LA": {
+      "stadium": "SoFi Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.9535,
+      "longitude": -118.3392,
+      "roof": "covered_open_sides",
+      "status": "outside_horizon"
+    },
+    "2026_18_SF_ARI": {
+      "stadium": "State Farm Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 33.5276,
+      "longitude": -112.2626,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    },
+    "2026_18_TB_NO": {
+      "stadium": "Caesars Superdome",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.9511,
+      "longitude": -90.0812,
+      "roof": "indoor",
+      "status": "outside_horizon"
+    },
+    "2026_18_TEN_HOU": {
+      "stadium": "Reliant Stadium",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "forecast": null,
+      "latitude": 29.6847,
+      "longitude": -95.4107,
+      "roof": "retractable",
+      "status": "outside_horizon"
+    }
+  },
+  "coverage": {
+    "fetch_failed": 28,
+    "outside_horizon": 164,
+    "past_unavailable": 80
+  }
+}

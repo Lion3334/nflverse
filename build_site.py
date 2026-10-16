@@ -38,7 +38,9 @@ def build():
         raise ValueError('Missing logos for scheduled teams')
     odds_path = ROOT / 'reports/odds_2026.json'
     odds = json.loads(odds_path.read_text()) if odds_path.exists() else None
-    payload = json.dumps({'odds': odds, 'rows': rows, 'source': note, 'logos': logos, 'schedule': schedule}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
+    weather_path = ROOT / 'reports/weather_2026.json'
+    weather = json.loads(weather_path.read_text()) if weather_path.exists() else None
+    payload = json.dumps({'weather': weather, 'odds': odds, 'rows': rows, 'source': note, 'logos': logos, 'schedule': schedule}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
     template = (ROOT / 'web/index.template.html').read_text()
     output = ROOT / 'docs/index.html'
     output.parent.mkdir(exist_ok=True)
