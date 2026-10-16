@@ -5,6 +5,7 @@ requires-python = ">=3.12"
 dependencies = ["nflreadpy>=0.1", "streamlit>=1.40", "polars>=1.0"]
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+browser = ["playwright>=1.50"]
 [tool.pytest.ini_options]
 pythonpath = ["."]
 
@@ -13,4 +14,4 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["metrics", "app", "export_leaderboards"]
+py-modules = ["metrics", "app", "export_leaderboards", "build_site"]
