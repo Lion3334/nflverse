@@ -4,9 +4,7 @@
 
 A standalone HTML site with **Matchups** as the default view and **EPA Leaderboards** as a second top-level section. The leaderboard has eight dimension tabs, three metric toggles (EPA/100 plays by default), and a horizontal team-distance plot above each table. Best teams are always on the right; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Real team logos appear in the plot and table, with names and abbreviations for clarity. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
 
-![Matchups site preview](docs/matchups-preview.png)
-
-[Leaderboard preview](docs/preview.png)
+[Open the live site](https://lion3334.github.io/nflverse/) · [Collaborator handoff](HANDOFF.md) · [Archived design explorations](ARCHIVE.md)
 
 ## Open the HTML site
 
@@ -117,7 +115,7 @@ python build_site.py
 .venv/bin/pytest -q
 ```
 
-Exports produce the reviewable Markdown/CSV EPA snapshots and `schedule_2026.json` under `reports/`. Kickoff timestamps are converted from nflverse Eastern game times to explicit UTC instants, including daylight saving time, before bundling. These are actual source data, unlike the older fabricated HTML design studies in `prototypes/`. The earlier pregame aggregation API remains in `metrics.py` for future matchup work.
+Exports produce the reviewable Markdown/CSV EPA snapshots and `schedule_2026.json` under `reports/`. Kickoff timestamps are converted from nflverse Eastern game times to explicit UTC instants, including daylight saving time, before bundling. These are actual source data. Earlier illustrative prototypes are documented in [ARCHIVE.md](ARCHIVE.md). The earlier pregame aggregation API remains in `metrics.py` for future matchup work.
 
 ## Browser validation
 
@@ -137,7 +135,7 @@ The matchup browser check covers all 272 games and 18 weeks, chronological order
 
 Odds tests cover Pacific schedule slots across DST, duplicate-run guards, strict Sunday opening cutoffs, immutable weekly openings and first observations, line movement, home/away sign conventions, missing markets, stale updates, pregame-only captures, bookmaker isolation, and credential-safe errors. The browser test checks real FanDuel quotes, pending/missed openings, plus injected synthetic quotes (never saved to the product), favorite changes, totals, Pick’em, stale warnings, and no browser API calls.
 
-The three-table browser check verifies all 224 Week 6 cells across all three metrics, correct offense/defense pairings, special teams, rank/color consistency, the 100× conversion, historical unavailable states, shared selectors, preserved FanDuel panels, and desktop/tablet/mobile layouts. The original `designs/` files remain archived mockups; `docs/index.html` is the current product.
+The three-table browser check verifies all 224 Week 6 cells across all three metrics, correct offense/defense pairings, special teams, rank/color consistency, the 100× conversion, historical unavailable states, shared selectors, preserved FanDuel panels, and desktop/tablet/mobile layouts. Superseded mockups are indexed in [ARCHIVE.md](ARCHIVE.md); `docs/index.html` is the current product.
 
 ## Logos
 

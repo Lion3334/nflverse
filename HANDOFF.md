@@ -6,7 +6,7 @@ Updated October 16, 2026. Start here, then read [README.md](README.md) for opera
 
 A personal NFL research dashboard for understanding matchups and informing low-stakes CBS/Sleeper pick'em choices. The user prefers a compact league-wide view with actual EPA values and league ranks, without tiers, predictions, or extra contextual features yet.
 
-The primary product is the static, self-contained `docs/index.html`, generated from `web/index.template.html` by `build_site.py`. Edit the template, then rebuild; do not hand-edit generated HTML. `app.py` is an alternative Streamlit implementation, not the primary experience. Older `designs/` and `prototypes/` are exploration artifacts.
+The primary product is the static, self-contained `docs/index.html`, generated from `web/index.template.html` by `build_site.py`. Edit the template, then rebuild; do not hand-edit generated HTML. `app.py` is an alternative Streamlit implementation, not the primary experience. Superseded previews and exploration artifacts have been removed from the active tree; [ARCHIVE.md](ARCHIVE.md) links to their preserved Git history. `docs/` now contains only the production site.
 
 Current approved interface:
 
