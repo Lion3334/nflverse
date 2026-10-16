@@ -27,9 +27,11 @@ with sync_playwright() as p:
     assert page.evaluate('DATA.odds.bookmaker') == 'fanduel'
     assert page.evaluate('DATA.odds.coverage.spread_quotes') > 0
     assert page.locator('.odds-unavailable').count() < 28
-    assert page.locator('.odds-market').first.locator('.odds-value').first.text_content() == 'Unavailable'
+    assert page.locator('.odds-market').first.locator('.odds-value').first.text_content() == '—'
     page.locator('#week-selector').select_option('REG-7')
-    assert 'Pending Sunday midnight PT' in page.locator('.odds-market').first.text_content()
+    assert 'Pending' in page.locator('.odds-market').first.text_content()
+    page.locator('.quote-details summary').first.click()
+    assert 'Pending Sunday midnight PT' in page.locator('.quote-details').first.inner_text()
     page.locator('#week-selector').select_option('REG-6')
     # Test fixtures only, injected into this browser; never written to reports or the site.
     page.evaluate('''() => {

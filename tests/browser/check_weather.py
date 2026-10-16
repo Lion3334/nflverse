@@ -30,6 +30,9 @@ with sync_playwright() as p:
       renderMatchups();
     }''')
     weather=page.locator('[data-game="2026_06_HOU_JAX"] .kickoff-weather')
+    assert '55°F' in weather.locator('summary').inner_text()
+    weather.locator('summary').click()
+    assert 'Retrieved' in weather.inner_text()
     for value in ['55°F','50°F','Wind W 12 mph','Gusts 20 mph','65%','0.04 in','Retrieved']:
         assert value in weather.text_content()
     page.evaluate("DATA.weather.games['2026_06_HOU_JAX'].status='stale_forecast';renderMatchups()")
