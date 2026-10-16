@@ -1,5 +1,7 @@
 # NFL EPA Lab
 
+**Collaborators:** start with [HANDOFF.md](HANDOFF.md) for current status, architecture, deployment requirements, known gaps, and recommended next work.
+
 A standalone HTML site with **Matchups** as the default view and **EPA Leaderboards** as a second top-level section. The leaderboard has eight dimension tabs, three metric toggles (EPA/100 plays by default), and a horizontal team-distance plot above each table. Best teams are always on the right; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Real team logos appear in the plot and table, with names and abbreviations for clarity. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
 
 ![Matchups site preview](docs/matchups-preview.png)
@@ -16,7 +18,7 @@ Alternatively, serve it locally from the repository root:
 python -m http.server 8000 --directory docs
 ```
 
-For a hosted site, enable **Settings → Pages → Deploy from a branch → main → /docs** in this GitHub repository. The files are ready for Pages, but pushing them does not enable hosting.
+For hosting with automatic data updates, enable **Settings → Pages → GitHub Actions** and set repository variable **`PUBLISH_PAGES=true`**. See [Activate on GitHub](#activate-on-github). Expected address: https://lion3334.github.io/nflverse/; deployment success must be verified in Actions.
 
 ## Matchups and the current week
 
@@ -41,7 +43,9 @@ Indoor stadiums explicitly label this as **outside weather, not field conditions
 
 Past games keep their last saved pregame forecast if available; they never receive a new forecast after kickoff. Games with no saved pregame forecast say so. Distant games, unknown venues/times, and failed requests have distinct unavailable states. Failed refreshes preserve older forecasts with a warning, provided kickoff and venue still match. Snapshot state is stored in `reports/weather_2026.json` and embedded in the HTML.
 
-**Initial cloud validation:** the request was blocked by this environment's network proxy, so the first snapshot contains unavailable states, not fabricated weather. The network draft now includes **`api.open-meteo.com`**; save/publish that setting and rerun the exporter to validate live data. Network failure states, successful synthetic response handling, time matching, and the UI were tested independently. The GitHub runner uses its own outbound networking and can refresh weather without the cloud allowlist or odds API key.
+**Update October 16, 2026:** GitHub refresh commit `35a5578` saved 28 available forecasts, confirming remote weather fetching succeeded. Pages deployment and recurring refresh execution still need verification.
+
+**Initial cloud validation (historical):** the request was blocked by this environment's network proxy, so the first snapshot contains unavailable states, not fabricated weather. The network draft now includes **`api.open-meteo.com`**; save/publish that setting and rerun the exporter to validate live data. Network failure states, successful synthetic response handling, time matching, and the UI were tested independently. The GitHub runner uses its own outbound networking and can refresh weather without the cloud allowlist or odds API key.
 
 Attribution: weather data by [Open-Meteo](https://open-meteo.com/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The product footer includes these links.
 
