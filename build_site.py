@@ -10,18 +10,25 @@ ROOT = Path(__file__).resolve().parent
 
 
 def build():
-    with (ROOT / 'reports/epa_2026_through_week_5.csv').open() as source:
-        rows = list(csv.DictReader(source))
-    for row in rows:
-        for key, value in row.items():
-            if key not in ('team', 'dimension', 'label'):
-                row[key] = float(value) if value else None
-    for row in rows:
-        row['epa_per_100_plays'] = row['epa_per_play'] * 100 if row['epa_per_play'] is not None else None
-        row['epa_per_100_plays_rank'] = row['epa_per_play_rank']
-    if len(rows) != 256 or len({r['team'] for r in rows}) != 32:
-        raise ValueError('Expected 32 teams across eight dimensions')
-    note = (ROOT / 'reports/epa_2026_through_week_5.md').read_text().splitlines()[2]
+    metadata = json.loads((ROOT / 'reports/epa_snapshot.json').read_text())
+    snapshots = {}
+    for path in sorted((ROOT / 'reports').glob(f'epa_{metadata["season"]}_through_week_*.csv')):
+        cutoff = int(path.stem.rsplit('_', 1)[1])
+        if cutoff > metadata['through_week']:
+            continue
+        with path.open() as source:
+            rows = list(csv.DictReader(source))
+        for row in rows:
+            for key, value in row.items():
+                if key not in ('team', 'dimension', 'label'):
+                    row[key] = float(value) if value else None
+            row['epa_per_100_plays'] = row['epa_per_play'] * 100 if row['epa_per_play'] is not None else None
+            row['epa_per_100_plays_rank'] = row['epa_per_play_rank']
+        if len(rows) != 256 or len({r['team'] for r in rows}) != 32:
+            raise ValueError('Expected 32 teams across eight dimensions')
+        snapshots[str(cutoff)] = rows
+    rows = snapshots[str(metadata['through_week'])]
+    note = (ROOT / f'reports/epa_{metadata["season"]}_through_week_{metadata["through_week"]}.md').read_text().splitlines()[2]
     logo_root = ROOT / 'web/assets/logos'
     manifest = json.loads((logo_root / 'sources.json').read_text())
     logos = {}
@@ -40,7 +47,7 @@ def build():
     odds = json.loads(odds_path.read_text()) if odds_path.exists() else None
     weather_path = ROOT / 'reports/weather_2026.json'
     weather = json.loads(weather_path.read_text()) if weather_path.exists() else None
-    payload = json.dumps({'weather': weather, 'odds': odds, 'rows': rows, 'source': note, 'logos': logos, 'schedule': schedule}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
+    payload = json.dumps({'epa': metadata, 'snapshots': snapshots, 'weather': weather, 'odds': odds, 'rows': rows, 'source': note, 'logos': logos, 'schedule': schedule}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
     template = (ROOT / 'web/index.template.html').read_text()
     output = ROOT / 'docs/index.html'
     output.parent.mkdir(exist_ok=True)

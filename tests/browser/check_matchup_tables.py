@@ -58,6 +58,14 @@ with sync_playwright() as p:
         page.set_viewport_size({'width':width,'height':844})
         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
     page.screenshot(path='/tmp/nfl-matchup-tables-mobile.png')
+    # Future snapshot must advance new games without changing historical Week 6.
+    page.evaluate("DATA.snapshots['6']=DATA.rows.map(r=>({...r,epa_per_100_plays:123}));DATA.epa.through_week=6;renderMatchups()")
+    assert 'Through Week 5' in page.locator('#matchup-epa-context').inner_text()
+    page.locator('#week-selector').select_option('REG-7')
+    assert 'Through Week 6' in page.locator('#matchup-epa-context').inner_text()
+    assert page.locator('.unit-table td[data-epa-value="123"]').count()>0
+    page.locator('#week-selector').select_option('REG-6')
+    assert page.locator('.unit-table td[data-epa-value="123"]').count()==0
     assert not errors,errors
     b.close()
 server.shutdown()

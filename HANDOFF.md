@@ -19,7 +19,7 @@ Current approved interface:
 
 ## Data contracts and limitations
 
-**EPA is fixed through Week 5 of 2026.** It does not advance automatically. Weeks 1–5 deliberately show no pregame matchup EPA to avoid hindsight; Week 6+ uses the labeled Week 5 snapshot. Implementing rolling weekly snapshots requires coordinated backend, report, UI, and test changes. Do not merely change the label. Corrected nflverse data is not an archived historical as-of snapshot.
+**EPA advances automatically after Tuesday rollover.** `weekly_epa.py` checks the completed prior week at the 4 a.m. Pacific refresh, retrying subsequent refreshes when source data is delayed. `reports/epa_snapshot.json` selects the latest immutable weekly CSV/Markdown archive. The builder embeds saved snapshots; historical matchups select the latest cutoff strictly before their week. Weeks without an earlier archive remain blank. Initial archive: Week 5. First planned advance: October 20, through Week 6. Corrected nflverse data is not original game-day data.
 
 EPA calculations/ranks: `metrics.py`; export: `export_leaderboards.py`; report: `reports/epa_2026_through_week_5.csv` and matching Markdown. Raw `epa_per_play` remains for compatibility. EPA/game uses completed team games including games with no qualifying plays. ST possession/opponent are nflverse posteam/defteam roles, not fixed kicking/returning units: receiver possesses kickoffs; punter possesses punts. No opponent/garbage-time adjustments.
 
@@ -42,7 +42,7 @@ Repository settings required:
 3. Actions repository **secret** `ODDS_API_KEY` = the user's Odds API key. Cloud secrets do not transfer automatically. Never put keys in source, HTML, logs, or chat. Weather needs no key; GitHub supplies deployment authentication.
 4. Actions enabled, workflow writes to main allowed, and any `github-pages` environment protection requirements satisfied.
 
-The user reported the first deployment running for over five minutes; deployment completion has not been independently verified. Git transport works here, but GitHub REST API calls returned Forbidden, preventing settings inspection or remote run control. Verify status in the GitHub Actions UI if API access remains unavailable. Cloud allowlists and GitHub-runner networking are separate.
+The user confirmed deployment is live. Git transport works here, but GitHub REST API calls returned Forbidden, preventing settings inspection or remote run control. Verify status in the GitHub Actions UI if API access remains unavailable. Cloud allowlists and GitHub-runner networking are separate.
 
 ## Development and validation
 
@@ -83,10 +83,10 @@ EPA export is explicitly Week 5: review scope before running `export_leaderboard
 
 ## Recommended next work, in order
 
-1. **Verify the live launch.** Check Pages settings, repository variable, secret presence (never value), and the current deploy run. Confirm deployed HTML includes the compact three-table layout and weather from the remote snapshot. Test the public URL on desktop/mobile. If stuck, inspect the precise failing/waiting step and environment approvals.
+1. **Check the live site after releases.** Deployment is confirmed live by the user. Check Pages settings, repository variable, secret presence (never value), and the current deploy run. Confirm deployed HTML includes the compact three-table layout and weather from the remote snapshot. Test the public URL on desktop/mobile. If stuck, inspect the precise failing/waiting step and environment approvals.
 2. **Make releases predictable.** Consider a dedicated Pages workflow triggered on `docs/` pushes and manual dispatch so code-only UI changes deploy without a data refresh. Coordinate with the current conditional deploy job to avoid concurrent/redundant deployments. This is a proposed improvement, not already implemented.
 3. **Verify scheduled operation.** Confirm 4 a.m./4 p.m. PT refreshes and Sunday opening capture execute, commit, and publish; odds secret is configured; failed API calls preserve prior data and show warnings. Inspect API quota. Weather fetch success is already evidenced, but recurring runs and updated FanDuel captures still require verification.
-4. **Agree on advancing EPA beyond Week 5.** User originally scoped Week 5, while the broader goal is season-to-date matchup research. Propose weekly snapshots as of completed prior week, preserve historical pregame views, and automate only after confirming desired behavior. Remove hardcoded Week 5 assumptions coherently.
+4. **Verify the first Tuesday EPA advance.** User authorized advancing every Tuesday after MNF. Confirm October 20 produces a through-Week-6 snapshot, publishes it, and retains Week 6 matchup values from the Week 5 archive. Delayed source data should retain the last snapshot and retry.
 5. **Iterate on real usage.** Retain compactness, inspect mobile expanders and heatmap readability, and gather user feedback before adding extra context, projections, pick recommendations, tiers, or other features.
 
 Keep main current without overwriting bot updates: fetch the actual `main` ref, inspect changes, fast-forward/rebase appropriately, then push. In this environment `git fetch origin main` updated `FETCH_HEAD` but not `origin/main`; compare against `FETCH_HEAD` or explicitly update the remote-tracking ref. Never force-push over snapshot history.

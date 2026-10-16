@@ -26,7 +26,7 @@ The published 2026 schedule currently has **272 regular-season games across all 
 
 The opening week is calculated in the browser at visit time, not at build time. NFL weeks roll over **Tuesday at midnight America/New_York**, using the first scheduled game of each week to locate that Tuesday. October 16, 2026 selects Week 6. Before the season, Week 1 is selected; after the published season, the final week is selected. Explicit week links preserve the chosen week. The page also checks for a new week while left open.
 
-The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. Matchup cells show the selected EPA value and league rank, with a continuous rank-based heat map (green = stronger, red = weaker). Defense and opponent-side special teams use lower-is-better ranks. On mobile the tables stack. EPA data remains through Week 5: Weeks 1–5 leave matchup EPA unavailable to avoid hindsight; Week 6 and later clearly label the saved through-Week-5 snapshot. Historical pregame snapshots have not been generated. The metric selector is shared with the leaderboard and persists in links. Old leaderboard links still work.
+The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. Matchup cells show the selected EPA value and league rank, with a continuous rank-based heat map (green = stronger, red = weaker). Defense and opponent-side special teams use lower-is-better ranks. On mobile the tables stack. EPA advances after Tuesday midnight Eastern at the first scheduled 4 a.m. Pacific refresh, then retries at subsequent twice-daily refreshes if source data is delayed. Only completed prior regular-season weeks are included. Published snapshots are retained, and historical matchups use the latest snapshot ending before that game’s week. Weeks without an earlier saved snapshot remain unavailable. The initial archive is through Week 5. The metric selector is shared with the leaderboard and persists in links. Old leaderboard links still work.
 
 ## Kickoff weather
 
@@ -43,9 +43,7 @@ Indoor stadiums explicitly label this as **outside weather, not field conditions
 
 Past games keep their last saved pregame forecast if available; they never receive a new forecast after kickoff. Games with no saved pregame forecast say so. Distant games, unknown venues/times, and failed requests have distinct unavailable states. Failed refreshes preserve older forecasts with a warning, provided kickoff and venue still match. Snapshot state is stored in `reports/weather_2026.json` and embedded in the HTML.
 
-**Update October 16, 2026:** GitHub refresh commit `35a5578` saved 28 available forecasts, confirming remote weather fetching succeeded. Pages deployment and recurring refresh execution still need verification.
-
-**Initial cloud validation (historical):** the request was blocked by this environment's network proxy, so the first snapshot contains unavailable states, not fabricated weather. The network draft now includes **`api.open-meteo.com`**; save/publish that setting and rerun the exporter to validate live data. Network failure states, successful synthetic response handling, time matching, and the UI were tested independently. The GitHub runner uses its own outbound networking and can refresh weather without the cloud allowlist or odds API key.
+**Deployment status:** the user confirmed GitHub Pages is live. Remote refresh commit `35a5578` saved 28 available kickoff forecasts, confirming weather fetching on GitHub. Local cloud allowlists are independent of GitHub networking.
 
 Attribution: weather data by [Open-Meteo](https://open-meteo.com/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The product footer includes these links.
 
@@ -146,3 +144,9 @@ The three-table browser check verifies all 224 Week 6 cells across all three met
 All 32 team logos are bundled as original PNGs from nflverse/nflplotR and embedded in the standalone HTML, so they work offline without CDN access. The build verifies their SHA-256 checksums. See [logo source and attribution](web/assets/logos/README.md) and [source manifest](web/assets/logos/sources.json). Team marks belong to their respective owners.
 
 Weather tests cover UTC/hour selection, unit validation, international venue mapping, deduplication, roof classifications, past/future windows, stale forecast preservation, changed kickoff invalidation, null fields, network failures, browser units/conditions/timestamps, and no client-side API requests.
+
+## Weekly EPA advancement
+
+`weekly_epa.py` uses schedule Tuesday boundaries in America/New_York (including DST). It checks all scheduled games through the target cutoff are complete and have play-by-play with EPA before publishing; on failure the workflow retains prior EPA, warns, and retries next refresh. Current metadata lives in `reports/epa_snapshot.json`. Published `reports/epa_2026_through_week_N.csv` / `.md` snapshots are retained without automated overwrites. The builder embeds the archive for historical matchups, and leaderboards always use the newest published cutoff. The first planned advance is Tuesday October 20: through Week 6 for Week 7 matchups. Schedule navigation already rolls over at Tuesday midnight Eastern; EPA can lag until its refresh and source availability.
+
+Manual check/advance: `.venv/bin/python weekly_epa.py`, followed by `.venv/bin/python build_site.py`. It makes no network requests when the published cutoff is already current. Never advance labels without validating source data.
