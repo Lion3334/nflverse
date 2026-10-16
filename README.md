@@ -20,28 +20,43 @@ For a hosted site, enable **Settings → Pages → Deploy from a branch → main
 
 ## Matchups and the current week
 
-The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows team logos, away/home roles, saved Polymarket US spread/total panels, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. Bye teams are listed below the slate.
+The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows team logos, away/home roles, saved FanDuel spread/total panels, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. Bye teams are listed below the slate.
 
 The opening week is calculated in the browser at visit time, not at build time. NFL weeks roll over **Tuesday at midnight America/New_York**, using the first scheduled game of each week to locate that Tuesday. October 16, 2026 selects Week 6. Before the season, Week 1 is selected; after the published season, the final week is selected. Explicit week links preserve the chosen week. The page also checks for a new week while left open.
 
 The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. This schedule view does not apply the fixed Week 5 EPA snapshot to historical or future matchups. Leaderboards retain their separate Week 5 scope. Old leaderboard links still work.
 
-## Polymarket US betting quotes
+## FanDuel betting quotes and refresh schedule
 
-The server-side updater reads `ODDS_API_KEY` from the environment and requests only NFL `spreads,totals` from The Odds API's `polymarket_us` bookmaker. Set the key securely in the execution environment, never in source code, client HTML, or a command-line argument. GitHub Actions would need its own separately configured repository secret if scheduling is added later.
+The updater requests NFL `spreads,totals` from **FanDuel (`fanduel`)** through The Odds API. The first FanDuel pull returned both markets for all 24 upcoming events. The old Polymarket US snapshot is preserved separately in `reports/odds_polymarket_us_2026.json`; histories are never mixed.
+
+The site displays **Weekly opening** and **Latest captured**:
+
+- Latest-line refresh targets: **4 a.m. and 4 p.m. America/Los_Angeles**, automatically handling PST/PDT.
+- Weekly opening target: **Sunday at 12:00 a.m. Pacific before that NFL week's Tuesday start**. Week 6's target was October 11, 2026; Week 7's is October 18. No past opening is reconstructed from today's quotes.
+- The opening capture accepts only quotes whose provider update timestamp is at or before the midnight cutoff and which are collected within 15 minutes after it. Otherwise the opening stays unavailable. Once captured, opening is immutable while latest values change. First-observed quotes remain stored for audit but are not relabeled as weekly opening.
+- Future opening targets display as pending. Missing markets never fall back to other books. Quotes must be pregame, and older provider updates cannot replace newer values.
+
+The checked-in [GitHub Actions workflow](.github/workflows/refresh-odds.yml) uses UTC candidate slots with a Pacific-time gate. Wrong-season DST candidates and duplicate latest captures in the same hour skip API calls. Scheduled jobs skip outside the published season. GitHub cron is best effort: jobs can be delayed or dropped, so this does not guarantee execution at exact wall-clock time. Missing the opening window leaves the opening unavailable. Manual workflow dispatch fetches latest only.
+
+### Activate on GitHub
+
+1. Under **repository Settings → Secrets and variables → Actions**, create repository secret **`ODDS_API_KEY`** with your API key. The cloud environment secret does **not** automatically transfer to GitHub. Never put the value in chat, HTML, source code, or command-line arguments.
+2. Ensure Actions are enabled and workflow pushes to `main` are permitted by repository rules. In **Actions → Refresh FanDuel NFL odds**, use **Run workflow** to verify GitHub-side access. This session's GitHub API access did not permit checking secret names or starting a remote run; local credentials and scheduled execution are distinct.
+3. For automatic hosting updates, enable Pages with **GitHub Actions** as the build source and create Actions repository variable **`PUBLISH_PAGES=true`**. The optional deploy job uploads `docs/` and deploys it explicitly. A `GITHUB_TOKEN` commit alone does not trigger branch-based Pages builds. Without that variable, snapshots and HTML still update in the repo; no deployment is claimed.
+
+Each normal refresh currently costs two credits (two markets). Twice daily uses about **4 credits/day**, plus **2 for the weekly opening pull**. The first FanDuel pull left 486 credits remaining. No historical paid endpoint is required for forward collection.
+
+### Manual refresh
 
 ```sh
 .venv/bin/python export_odds.py
 python build_site.py
+# Sunday opening job only; validates the cutoff/window before saving any opening:
+.venv/bin/python export_odds.py --capture-opening
 ```
 
-The build embeds the sanitized `reports/odds_2026.json` snapshot in the HTML. The browser makes no odds API calls and contains no API key. Refresh failures leave the prior snapshot intact. Keep this JSON file between runs: it contains the earliest quote captured and latest observed quote for each market/game. It is intentionally checked in for reproducible, reviewable snapshots. Deleting it resets first-observed history.
-
-**Coverage verified October 16, 2026:** the bookmaker is recognized and supplies moneylines, but returned **zero NFL spread or total quotes**. The saved snapshot correctly shows unavailable markets. Moneylines and other bookmakers are never substituted for the requested spread/total markets. This verifies access, not availability of these two markets.
-
-Quotes are labeled **First observed** and **Last observed**, not opening or live. No historical-opening endpoint has been integrated or verified. Each quote stores capture time and provider update time; unavailable markets retain older quotes with a visible warning. Events map to schedule games by both teams and kickoff (within 24 hours); ambiguous matches are skipped. Only quotes captured before kickoff are accepted. A negative home point means the home team is favored (the reverse of nflverse's `spread_line` convention). UI renders the favored team's abbreviation and spread, or Pick’em. Totals are shown as O/U.
-
-Refreshes are currently **manual**. In validation, requesting two markets cost two API credits; a 30-minute schedule would cost about 96 credits/day. The account reported 495 credits remaining after validation. No recurring job was enabled to spend credits on empty markets. A later scheduled updater must securely load the key, run the exporter/build, retain the snapshot, and publish the generated files. The current static site does not auto-refresh.
+The build embeds sanitized `reports/odds_2026.json` in the HTML. Keep this file between runs: it preserves opening, first-observed, and latest quote history per game/market. The browser makes no API calls and contains no API key. Refresh failures preserve the prior file. Events map by both teams and kickoff within 24 hours; ambiguous matches are skipped. Home-negative points mean home favored, unlike nflverse's spread convention. The UI shows the favored team's spread or Pick’em, and totals as O/U. Schedule/EPA data remain separate snapshots and are not refreshed by the odds job.
 
 ## Rebuild the site
 
@@ -97,7 +112,7 @@ The leaderboard browser check serves the static site temporarily and verifies al
 
 The matchup browser check covers all 272 games and 18 weeks, chronological ordering, every week rollover including DST, default Week 6, pre/post-season bounds, explicit-week links, week navigation, local kickoff times in Los Angeles and Tokyo, mobile layout, and backward-compatible leaderboard links.
 
-Odds tests cover immutable first observations, line movement, home/away sign conventions, missing markets, stale updates, pregame-only captures, bookmaker isolation, and credential-safe errors. The browser test checks real unavailable states plus injected synthetic quotes (never saved to the product), favorite changes, totals, Pick’em, stale warnings, and no browser API calls.
+Odds tests cover Pacific schedule slots across DST, duplicate-run guards, strict Sunday opening cutoffs, immutable weekly openings and first observations, line movement, home/away sign conventions, missing markets, stale updates, pregame-only captures, bookmaker isolation, and credential-safe errors. The browser test checks real FanDuel quotes, pending/missed openings, plus injected synthetic quotes (never saved to the product), favorite changes, totals, Pick’em, stale warnings, and no browser API calls.
 
 ## Logos
 

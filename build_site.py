@@ -4,6 +4,7 @@ import base64
 import hashlib
 import json
 from pathlib import Path
+from odds_schedule import opening_target
 
 ROOT = Path(__file__).resolve().parent
 
@@ -27,6 +28,8 @@ def build():
             raise ValueError(f'Logo checksum mismatch: {team}')
         logos[team] = 'data:image/png;base64,' + base64.b64encode(image).decode('ascii')
     schedule = json.loads((ROOT / 'reports/schedule_2026.json').read_text())
+    for week in schedule['weeks']:
+        week['opening_target_at'] = opening_target(week).isoformat()
     schedule_teams = {g[side] for g in schedule['games'] for side in ('away_team', 'home_team')}
     if not schedule_teams.issubset(logos):
         raise ValueError('Missing logos for scheduled teams')

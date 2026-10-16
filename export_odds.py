@@ -1,5 +1,6 @@
-"""Fetch Polymarket US NFL spreads/totals without exposing the API key."""
+"""Fetch FanDuel NFL spreads/totals without exposing the API key."""
 import json
+import argparse
 import os
 from pathlib import Path
 import sys
@@ -30,24 +31,27 @@ def fetch_events():
     return events,usage
 
 
-def export():
+def export(capture_opening=False):
     events,usage=fetch_events()
     output=ROOT/'reports/odds_2026.json'
     previous=json.loads(output.read_text()) if output.exists() else None
     schedule=json.loads((ROOT/'reports/schedule_2026.json').read_text())
-    snapshot=update_snapshot(events,schedule,previous)
+    snapshot=update_snapshot(events,schedule,previous,capture_opening=capture_opening)
     temporary=output.with_suffix('.json.tmp')
     temporary.write_text(json.dumps(snapshot,indent=2,allow_nan=False)+'\n')
     temporary.replace(output)
-    print('Saved Polymarket US snapshot:',json.dumps(snapshot['coverage']))
+    print('Saved FanDuel snapshot:',json.dumps(snapshot['coverage']))
     print('API quota:',json.dumps(usage))
     if not snapshot['coverage']['spread_quotes'] and not snapshot['coverage']['total_quotes']:
         print('No spreads or totals returned. Missing markets remain unavailable; no other bookmaker substituted.')
 
 
 if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--capture-opening",action="store_true",help="Capture Sunday 00:00 PT baseline only within its strict window")
+    args=parser.parse_args()
     try:
-        export()
+        export(capture_opening=args.capture_opening)
     except (RuntimeError,ValueError,OSError):
         # Print only our known-safe RuntimeError messages, not parser/OS details.
         error=sys.exception()

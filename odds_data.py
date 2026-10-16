@@ -1,9 +1,11 @@
-"""Polymarket US spread/total snapshots. No credentials or raw API responses persist."""
+"""FanDuel spread/total snapshots. No credentials or raw API responses persist."""
 from copy import deepcopy
 from datetime import datetime, timezone
 import math
 
-BOOKMAKER = 'polymarket_us'
+from odds_schedule import opening_target, opening_window
+
+BOOKMAKER = 'fanduel'
 TEAM_NAMES = {
     'Arizona Cardinals':'ARI','Atlanta Falcons':'ATL','Baltimore Ravens':'BAL','Buffalo Bills':'BUF',
     'Carolina Panthers':'CAR','Chicago Bears':'CHI','Cincinnati Bengals':'CIN','Cleveland Browns':'CLE',
@@ -54,7 +56,7 @@ def quote(market, event, observed_at, book_updated):
     return result
 
 
-def update_snapshot(events, schedule, previous=None, observed_at=None):
+def update_snapshot(events, schedule, previous=None, observed_at=None, capture_opening=False):
     observed_at = observed_at or datetime.now(timezone.utc).isoformat(timespec='seconds')
     now = instant(observed_at)
     if now is None:
@@ -65,8 +67,9 @@ def update_snapshot(events, schedule, previous=None, observed_at=None):
         raise ValueError('Refusing to mix bookmaker history')
     if previous and instant(previous.get('fetched_at')) and instant(previous['fetched_at'])>now:
         raise ValueError('Refusing an older fetch over a newer snapshot')
-    result = deepcopy(previous) if previous else dict(schema_version=1, season=2026, bookmaker=BOOKMAKER, games={})
+    result = deepcopy(previous) if previous else dict(schema_version=2, season=2026, bookmaker=BOOKMAKER, games={})
     result.update(fetched_at=observed_at, markets_requested=list(MARKETS))
+    week_targets={w['key']:opening_target(w) for w in schedule.get('weeks',[])}
     stats = dict(events_returned=len(events),matched_events=0,unmatched_events=0,spread_quotes=0,total_quotes=0)
     for old in result['games'].values():
         for key in MARKETS:
@@ -86,8 +89,14 @@ def update_snapshot(events, schedule, previous=None, observed_at=None):
         stats['matched_events']+=1
         entry=result['games'].setdefault(game['game_id'],dict(
             provider_event_id=event.get('id'),home_team=home,away_team=away,
-            spreads=dict(first_observed=None,latest=None,returned_at_last_check=False),
-            totals=dict(first_observed=None,latest=None,returned_at_last_check=False)))
+            spreads=dict(opening=None,first_observed=None,latest=None,returned_at_last_check=False),
+            totals=dict(opening=None,first_observed=None,latest=None,returned_at_last_check=False)))
+        target=week_targets.get(game.get('week_key'))
+        entry['opening_target_at']=target.isoformat() if target else None
+        for market_key in MARKETS:
+            entry[market_key].setdefault('opening',None)
+        if capture_opening and target and opening_window(target,now):
+            entry['opening_checked_at']=observed_at
         # Never capture live or postgame quotes as pregame lines.
         if kickoff<=now:
             continue
@@ -104,6 +113,9 @@ def update_snapshot(events, schedule, previous=None, observed_at=None):
                 state=entry[key]
                 if state['latest'] and instant(state['latest']['source_updated_at'])>instant(value['source_updated_at']):
                     continue
+                if (capture_opening and target and opening_window(target,now)
+                        and instant(value['source_updated_at'])<=target and state['opening'] is None):
+                    state['opening']=deepcopy(value)
                 if state['first_observed'] is None:
                     state['first_observed']=deepcopy(value)
                 state.update(latest=value,returned_at_last_check=True)

@@ -1,4 +1,4 @@
-"""Verify real unavailable states and synthetic quote rendering without API calls."""
+"""Verify FanDuel coverage, missing opening states and synthetic quote rendering without API calls."""
 import functools
 import shutil
 import threading
@@ -22,16 +22,22 @@ with sync_playwright() as p:
     page.goto(f'http://127.0.0.1:{server.server_port}/')
     assert page.locator('.odds-panel').count()==14
     assert page.locator('.odds-market').count()==28
-    # Check the real empty snapshot against what the API actually returned.
-    assert '0 spread and 0 total quotes' in page.locator('#odds-coverage').text_content()
-    assert page.locator('.odds-unavailable').count()==28
+    # Actual FanDuel snapshot: no retrospective opening is invented.
+    assert 'FanDuel' in page.locator('#odds-coverage').text_content()
+    assert page.evaluate('DATA.odds.bookmaker') == 'fanduel'
+    assert page.evaluate('DATA.odds.coverage.spread_quotes') > 0
+    assert page.locator('.odds-unavailable').count() < 28
+    assert page.locator('.odds-market').first.locator('.odds-value').first.text_content() == 'Unavailable'
+    page.locator('#week-selector').select_option('REG-7')
+    assert 'Pending Sunday midnight PT' in page.locator('.odds-market').first.text_content()
+    page.locator('#week-selector').select_option('REG-6')
     # Test fixtures only, injected into this browser; never written to reports or the site.
     page.evaluate('''() => {
       const first={home_point:-3.5,away_point:3.5,observed_at:'2026-10-15T00:00:00Z',source_updated_at:'2026-10-14T23:59:00Z'};
       const last={...first,home_point:-4.5,away_point:4.5};
       DATA.odds.games['2026_06_SEA_DEN']={
-        spreads:{first_observed:first,latest:last,returned_at_last_check:true},
-        totals:{first_observed:{...first,point:44.5},latest:{...last,point:45.5},returned_at_last_check:false}
+        spreads:{opening:first,first_observed:first,latest:last,returned_at_last_check:true},
+        totals:{opening:{...first,point:44.5},first_observed:{...first,point:44.5},latest:{...last,point:45.5},returned_at_last_check:false}
       };renderMatchups();
     }''')
     card=page.locator('[data-game="2026_06_SEA_DEN"]')
@@ -50,4 +56,4 @@ with sync_playwright() as p:
     assert not errors and not external
     browser.close()
 server.shutdown()
-print('PASS: unavailable real snapshot, first/latest spread and total, favorite signs, pick’em, stale quotes, mobile; no browser API requests')
+print('PASS: FanDuel real snapshot, unavailable opening, weekly opening/latest spread and total, favorite signs, pick’em, stale quotes, mobile; no browser API requests')

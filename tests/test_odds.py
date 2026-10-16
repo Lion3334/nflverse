@@ -6,7 +6,7 @@ SCHEDULE={'games':[{'game_id':'2026_06_SEA_DEN','home_team':'DEN','away_team':'S
 NOW='2026-10-16T19:00:00Z'
 
 
-def event(home_point=-3.5,total=44.5,book='polymarket_us',updated='2026-10-16T18:50:00Z'):
+def event(home_point=-3.5,total=44.5,book='fanduel',updated='2026-10-16T18:50:00Z'):
     return {'id':'event-1','sport_key':'americanfootball_nfl','home_team':'Denver Broncos','away_team':'Seattle Seahawks',
             'commence_time':'2026-10-18T20:00:00Z','bookmakers':[{'key':book,'last_update':updated,'markets':[
                 {'key':'spreads','outcomes':[{'name':'Denver Broncos','point':home_point},{'name':'Seattle Seahawks','point':-home_point}]},
