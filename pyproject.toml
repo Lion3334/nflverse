@@ -2,7 +2,7 @@
 name = "nfl-matchup-lab"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = ["nflreadpy>=0.1", "streamlit>=1.40", "polars>=1.0"]
+dependencies = ["nflreadpy>=0.1", "streamlit>=1.40", "polars>=1.0", "requests>=2.28"]
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 browser = ["playwright>=1.50"]
@@ -14,4 +14,4 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["metrics", "app", "export_leaderboards", "build_site", "schedule_data", "export_schedule", "venue_locations"]
+py-modules = ["metrics", "app", "export_leaderboards", "build_site", "schedule_data", "export_schedule", "venue_locations", "odds_data", "export_odds"]

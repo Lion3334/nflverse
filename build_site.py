@@ -30,7 +30,9 @@ def build():
     schedule_teams = {g[side] for g in schedule['games'] for side in ('away_team', 'home_team')}
     if not schedule_teams.issubset(logos):
         raise ValueError('Missing logos for scheduled teams')
-    payload = json.dumps({'rows': rows, 'source': note, 'logos': logos, 'schedule': schedule}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
+    odds_path = ROOT / 'reports/odds_2026.json'
+    odds = json.loads(odds_path.read_text()) if odds_path.exists() else None
+    payload = json.dumps({'odds': odds, 'rows': rows, 'source': note, 'logos': logos, 'schedule': schedule}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
     template = (ROOT / 'web/index.template.html').read_text()
     output = ROOT / 'docs/index.html'
     output.parent.mkdir(exist_ok=True)

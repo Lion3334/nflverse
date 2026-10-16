@@ -20,11 +20,28 @@ For a hosted site, enable **Settings → Pages → Deploy from a branch → main
 
 ## Matchups and the current week
 
-The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows team logos, away/home roles, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. Bye teams are listed below the slate.
+The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows team logos, away/home roles, saved Polymarket US spread/total panels, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. Bye teams are listed below the slate.
 
 The opening week is calculated in the browser at visit time, not at build time. NFL weeks roll over **Tuesday at midnight America/New_York**, using the first scheduled game of each week to locate that Tuesday. October 16, 2026 selects Week 6. Before the season, Week 1 is selected; after the published season, the final week is selected. Explicit week links preserve the chosen week. The page also checks for a new week while left open.
 
 The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. This schedule view does not apply the fixed Week 5 EPA snapshot to historical or future matchups. Leaderboards retain their separate Week 5 scope. Old leaderboard links still work.
+
+## Polymarket US betting quotes
+
+The server-side updater reads `ODDS_API_KEY` from the environment and requests only NFL `spreads,totals` from The Odds API's `polymarket_us` bookmaker. Set the key securely in the execution environment, never in source code, client HTML, or a command-line argument. GitHub Actions would need its own separately configured repository secret if scheduling is added later.
+
+```sh
+.venv/bin/python export_odds.py
+python build_site.py
+```
+
+The build embeds the sanitized `reports/odds_2026.json` snapshot in the HTML. The browser makes no odds API calls and contains no API key. Refresh failures leave the prior snapshot intact. Keep this JSON file between runs: it contains the earliest quote captured and latest observed quote for each market/game. It is intentionally checked in for reproducible, reviewable snapshots. Deleting it resets first-observed history.
+
+**Coverage verified October 16, 2026:** the bookmaker is recognized and supplies moneylines, but returned **zero NFL spread or total quotes**. The saved snapshot correctly shows unavailable markets. Moneylines and other bookmakers are never substituted for the requested spread/total markets. This verifies access, not availability of these two markets.
+
+Quotes are labeled **First observed** and **Last observed**, not opening or live. No historical-opening endpoint has been integrated or verified. Each quote stores capture time and provider update time; unavailable markets retain older quotes with a visible warning. Events map to schedule games by both teams and kickoff (within 24 hours); ambiguous matches are skipped. Only quotes captured before kickoff are accepted. A negative home point means the home team is favored (the reverse of nflverse's `spread_line` convention). UI renders the favored team's abbreviation and spread, or Pick’em. Totals are shown as O/U.
+
+Refreshes are currently **manual**. In validation, requesting two markets cost two API credits; a 30-minute schedule would cost about 96 credits/day. The account reported 495 credits remaining after validation. No recurring job was enabled to spend credits on empty markets. A later scheduled updater must securely load the key, run the exporter/build, retain the snapshot, and publish the generated files. The current static site does not auto-refresh.
 
 ## Rebuild the site
 
@@ -73,11 +90,14 @@ Exports produce the reviewable Markdown/CSV EPA snapshots and `schedule_2026.jso
 # Requires system Chromium on PATH (or install Chromium for this machine).
 .venv/bin/python tests/browser/check_site.py
 .venv/bin/python tests/browser/check_matchups.py
+.venv/bin/python tests/browser/check_odds.py
 ```
 
 The leaderboard browser check serves the static site temporarily and verifies all 24 dimension/metric combinations, exact linear horizontal positions, label separation, correct sorting, keyboard interaction, team highlighting, CSV download, URL state, and mobile overflow.
 
 The matchup browser check covers all 272 games and 18 weeks, chronological ordering, every week rollover including DST, default Week 6, pre/post-season bounds, explicit-week links, week navigation, local kickoff times in Los Angeles and Tokyo, mobile layout, and backward-compatible leaderboard links.
+
+Odds tests cover immutable first observations, line movement, home/away sign conventions, missing markets, stale updates, pregame-only captures, bookmaker isolation, and credential-safe errors. The browser test checks real unavailable states plus injected synthetic quotes (never saved to the product), favorite changes, totals, Pick’em, stale warnings, and no browser API calls.
 
 ## Logos
 
