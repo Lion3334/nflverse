@@ -33,7 +33,7 @@ Weather: `weather_data.py`, `export_weather.py`, `venue_weather.py`, `reports/we
 
 Expected Pages address: https://lion3334.github.io/nflverse/ — verify reachability and deployed revision; do not assume it is live based on a Git push.
 
-`.github/workflows/refresh-odds.yml` (**Refresh NFL odds and weather**) is already committed. It refreshes weather independently of odds credentials, captures quotes, rebuilds HTML, and commits changed snapshots. Conditional Pages deployment follows a changed refresh when repository variable `PUBLISH_PAGES` is `true`. It currently does not deploy on every ordinary code push; account for this when releasing UI changes. A refresh with no changed output skips deployment.
+`.github/workflows/refresh-odds.yml` (**Refresh NFL odds and weather**) is already committed. It refreshes weather independently of odds credentials, captures quotes, rebuilds HTML, and commits changed snapshots. Conditional Pages deployment follows a changed refresh when repository variable `PUBLISH_PAGES` is `true`. The separate `publish-site.yml` workflow deploys site-related pushes to main and supports manual dispatch. It rebuilds from committed snapshots without API calls. Both deployment jobs share a concurrency group to serialize Pages publishing. A refresh with no changed output skips its own deployment.
 
 Repository settings required:
 
@@ -84,7 +84,7 @@ EPA export is explicitly Week 5: review scope before running `export_leaderboard
 ## Recommended next work, in order
 
 1. **Check the live site after releases.** Deployment is confirmed live by the user. Check Pages settings, repository variable, secret presence (never value), and the current deploy run. Confirm deployed HTML includes the compact three-table layout and weather from the remote snapshot. Test the public URL on desktop/mobile. If stuck, inspect the precise failing/waiting step and environment approvals.
-2. **Make releases predictable.** Consider a dedicated Pages workflow triggered on `docs/` pushes and manual dispatch so code-only UI changes deploy without a data refresh. Coordinate with the current conditional deploy job to avoid concurrent/redundant deployments. This is a proposed improvement, not already implemented.
+2. **Verify automatic releases.** `publish-site.yml` now publishes site-related pushes and manual dispatches; verify the first run in Actions. It shares Pages concurrency with data-refresh deployments.
 3. **Verify scheduled operation.** Confirm 4 a.m./4 p.m. PT refreshes and Sunday opening capture execute, commit, and publish; odds secret is configured; failed API calls preserve prior data and show warnings. Inspect API quota. Weather fetch success is already evidenced, but recurring runs and updated FanDuel captures still require verification.
 4. **Verify the first Tuesday EPA advance.** User authorized advancing every Tuesday after MNF. Confirm October 20 produces a through-Week-6 snapshot, publishes it, and retains Week 6 matchup values from the Week 5 archive. Delayed source data should retain the last snapshot and retry.
 5. **Iterate on real usage.** Retain compactness, inspect mobile expanders and heatmap readability, and gather user feedback before adding extra context, projections, pick recommendations, tiers, or other features.

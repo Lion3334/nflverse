@@ -1,0 +1,44 @@
+name: Publish NFL EPA site
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'web/**'
+      - 'reports/**'
+      - 'build_site.py'
+      - 'odds_schedule.py'
+      - '.github/workflows/publish-site.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy:
+    if: vars.PUBLISH_PAGES == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages-publish
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build from committed snapshots
+        run: python build_site.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4

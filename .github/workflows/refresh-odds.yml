@@ -68,6 +68,9 @@ jobs:
   # Optional: repository variable PUBLISH_PAGES=true enables explicit Pages deployment.
   # GITHUB_TOKEN commits alone do not trigger branch-based Pages builds.
   deploy:
+    concurrency:
+      group: github-pages-publish
+      cancel-in-progress: false
     needs: refresh
     if: needs.refresh.outputs.changed == 'true' && vars.PUBLISH_PAGES == 'true'
     runs-on: ubuntu-latest
