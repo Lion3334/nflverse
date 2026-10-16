@@ -1,5 +1,7 @@
 """Build the standalone HTML site from the checked-in EPA snapshot."""
 import csv
+import base64
+import hashlib
 import json
 from pathlib import Path
 
@@ -16,7 +18,15 @@ def build():
     if len(rows) != 256 or len({r['team'] for r in rows}) != 32:
         raise ValueError('Expected 32 teams across eight dimensions')
     note = (ROOT / 'reports/epa_2026_through_week_5.md').read_text().splitlines()[2]
-    payload = json.dumps({'rows': rows, 'source': note}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
+    logo_root = ROOT / 'web/assets/logos'
+    manifest = json.loads((logo_root / 'sources.json').read_text())
+    logos = {}
+    for team in sorted({r['team'] for r in rows}):
+        image = (logo_root / f'{team}.png').read_bytes()
+        if hashlib.sha256(image).hexdigest() != manifest['logos'][team]['sha256']:
+            raise ValueError(f'Logo checksum mismatch: {team}')
+        logos[team] = 'data:image/png;base64,' + base64.b64encode(image).decode('ascii')
+    payload = json.dumps({'rows': rows, 'source': note, 'logos': logos}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
     template = (ROOT / 'web/index.template.html').read_text()
     output = ROOT / 'docs/index.html'
     output.parent.mkdir(exist_ok=True)

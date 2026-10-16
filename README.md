@@ -1,6 +1,6 @@
 # NFL EPA Leaderboards
 
-A standalone HTML site with eight dimension tabs, three metric toggles (EPA/play by default), and a horizontal team-distance plot above each table. Best teams are always on the left; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
+A standalone HTML site with eight dimension tabs, three metric toggles (EPA/play by default), and a horizontal team-distance plot above each table. Best teams are always on the left; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Real team logos appear in the plot and table, with names and abbreviations for clarity. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
 
 ![Leaderboard site preview](docs/preview.png)
 
@@ -64,3 +64,7 @@ Export produces the reviewable Markdown and CSV snapshots under `reports/`. Thes
 ```
 
 The browser check serves the static site temporarily and verifies all 24 dimension/metric combinations, exact linear horizontal positions, label separation, correct sorting, keyboard interaction, team highlighting, CSV download, URL state, and mobile overflow.
+
+## Logos
+
+All 32 team logos are bundled as original PNGs from nflverse/nflplotR and embedded in the standalone HTML, so they work offline without CDN access. The build verifies their SHA-256 checksums. See [logo source and attribution](web/assets/logos/README.md) and [source manifest](web/assets/logos/sources.json). Team marks belong to their respective owners.

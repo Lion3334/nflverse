@@ -25,6 +25,18 @@ with sync_playwright() as p:
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.goto(url)
     assert page.locator('[data-metric="epa_per_play"]').get_attribute('aria-pressed') == 'true'
+    assert page.locator('.team-icon').count() == 32
+    assert page.locator('.point image').count() == 32
+    page.evaluate('''async () => {
+        const images = [...document.querySelectorAll('.team-icon')];
+        await Promise.all(images.map(image => image.decode()));
+        for (const image of images) {
+            if (!image.src.startsWith('data:image/png;base64,') || !image.naturalWidth) throw new Error('Missing bundled logo');
+        }
+        await Promise.all([...document.querySelectorAll('.point image')].map(async el => {
+            const image = new Image(); image.src = el.getAttribute('href'); await image.decode();
+        }));
+    }''')
     data = json.loads(page.locator('#epa-data').text_content())['rows']
     for dimension in dict.fromkeys(r['dimension'] for r in data):
         page.locator(f'[data-dimension="{dimension}"]').click()
@@ -70,6 +82,7 @@ with sync_playwright() as p:
     assert page.locator('[data-dimension="def_pass"]').get_attribute('aria-selected') == 'true'
     page.goto(url + '#dimension=off_total&metric=epa_per_play')
     page.evaluate('document.activeElement.blur()')
+    page.locator('.team-icon').evaluate_all('(els)=>Promise.all(els.map(e=>e.decode()))')
     page.screenshot(path='/tmp/nfl-epa-desktop.png', full_page=False)
     page.set_viewport_size({'width': 390, 'height': 844})
     assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
@@ -78,4 +91,4 @@ with sync_playwright() as p:
     assert not errors, errors
     browser.close()
 server.shutdown()
-print('PASS: all 24 dimension/metric views, exact linear positioning, no label collisions, table selection, keyboard controls, CSV, URL state, mobile layout; no browser errors')
+print('PASS: all 24 dimension/metric views, exact linear positioning, no label collisions, table selection, keyboard controls, CSV, URL state, mobile layout, all 32 bundled logos decode in table and plot; no browser errors')

@@ -1,0 +1,136 @@
+{
+  "source": "https://github.com/nflverse/nflplotR",
+  "commit": "7872fba39df46f569fda13a608acec1c6231991d",
+  "file": "R/sysdata.rda",
+  "object": "logo_list",
+  "logos": {
+    "ARI": {
+      "sha256": "f870b58b43585a5b7717d578dd433b0b1e0c462d64ef4bea2aeb8c03f4ae7854",
+      "bytes": 41994
+    },
+    "ATL": {
+      "sha256": "fe566e9da6f7986b2bac321571bd751247ff93af15c51ae555486fb1bee90c91",
+      "bytes": 51781
+    },
+    "BAL": {
+      "sha256": "67796023c172c9aeab5bcdac9204823d3590097246ad1cb92971134b5f26dcc0",
+      "bytes": 55985
+    },
+    "BUF": {
+      "sha256": "79b71e2f536ee29f9d23834e89828883af2d95bf6968cbd07a505444229cdd20",
+      "bytes": 38004
+    },
+    "CAR": {
+      "sha256": "2cebc1bbdcfd89f28c1578b397f440d229d93fa9a30bfa1193cc286482c82298",
+      "bytes": 36636
+    },
+    "CHI": {
+      "sha256": "fd7b5a207b9ad443f950b384d43dba6cb367c5737ad50a51a15e3893fa31753b",
+      "bytes": 93593
+    },
+    "CIN": {
+      "sha256": "8e549c0ecac92453140370b2aef3e4a140139b50d16e92507532e8ee49930d4e",
+      "bytes": 26628
+    },
+    "CLE": {
+      "sha256": "9b286fc4286dc39b1b5a6a08aab042b456ba5fdce99e45e49a4d1e2672411fa2",
+      "bytes": 94482
+    },
+    "DAL": {
+      "sha256": "f4ea9a2ec7d7d500f08db94c8c6f1b23f75361ffe39c4d4b480a684a511ce61e",
+      "bytes": 32372
+    },
+    "DEN": {
+      "sha256": "c98bec2be32e27b19f79f5da86ac6ef133c78d75ab78aadb28ef36696c3213e8",
+      "bytes": 40948
+    },
+    "DET": {
+      "sha256": "9776b567ebab0bd3640165e915d948d8e736e35967dfc19ce62b967cfe7b4eb1",
+      "bytes": 57465
+    },
+    "GB": {
+      "sha256": "7ea8154cdbff5db84d248f235c1f1c78a1a8b4cb8c14335b5886ec10ee20b00e",
+      "bytes": 39188
+    },
+    "HOU": {
+      "sha256": "54b0fe559761860e4953851c197d995b2f9c0c4e278164edda7b608ffd64f39b",
+      "bytes": 35767
+    },
+    "IND": {
+      "sha256": "f1f5222a876f810956aa8d4e75d4e6b47bcb3a6d11f876642b674010233c8a97",
+      "bytes": 42083
+    },
+    "JAX": {
+      "sha256": "15cb9a1c77ebfaea885d0d3a34f33dabc4e6a00eb7d5462148fceed641d49397",
+      "bytes": 78814
+    },
+    "KC": {
+      "sha256": "3d77958dc6373768919bb2681cbe1b143f56c07a1f013460def665a5026a7f3d",
+      "bytes": 40228
+    },
+    "LA": {
+      "sha256": "e289b738a5e1259cccea921bee02eec881d35b4241761a8c4e12fe5964cab75c",
+      "bytes": 38707
+    },
+    "LAC": {
+      "sha256": "5400f85bd93129c056717a771da57a97225e15f39c0022107ce89ef993f15bb0",
+      "bytes": 32850
+    },
+    "LV": {
+      "sha256": "25fbb03e972ae872fa024026b73c7b63ef9f23c2f2c51f87d1614d800dcee6e7",
+      "bytes": 77766
+    },
+    "MIA": {
+      "sha256": "b9631269a82abda39bd748afc82390679ca67bfc167bc3581665e237407de8e0",
+      "bytes": 64408
+    },
+    "MIN": {
+      "sha256": "72759956b149bc1c9496ea6ebb9a6ae34093dfed371cc6abb425c13f14f53448",
+      "bytes": 69686
+    },
+    "NE": {
+      "sha256": "dac19aa9a573dcf9075e2422bee3e35a4955b9ab494bb3191ab3bacfd3609729",
+      "bytes": 32083
+    },
+    "NO": {
+      "sha256": "68ddfdf1d7ee8317f1af083a0c6d59142a11e8af4dad73c3c50bbafc338e0a94",
+      "bytes": 52016
+    },
+    "NYG": {
+      "sha256": "62e361850e7ba3a50dfd09cbb38429e994d1c23b0f999c74421f10e37c7067e7",
+      "bytes": 7574
+    },
+    "NYJ": {
+      "sha256": "31e985b5976a359dbe91ce96976db37ec317082fc45a87043fe91c11273780a9",
+      "bytes": 3526
+    },
+    "PHI": {
+      "sha256": "2875f50f8b756ed5ea3866105b4683f5c603aa542e2c7f7870287e1d3d006100",
+      "bytes": 70332
+    },
+    "PIT": {
+      "sha256": "806bcb72e75ed184a99bea34df458e6cd87145fc9a863945f3356b01122aeb6f",
+      "bytes": 56620
+    },
+    "SEA": {
+      "sha256": "2546b1d4fe5cf6c2d75cda53d3fb56bbc4dd43c6b00200586dab5a85df8fa492",
+      "bytes": 32081
+    },
+    "SF": {
+      "sha256": "82ae812f6c15718ce5abdd402863e8b4553fa9971e4baa5d45ff585c52948a45",
+      "bytes": 48699
+    },
+    "TB": {
+      "sha256": "bcc5d267024650938c9f35558077fe00a31913b89c61768d4ebb63d1ea31fbfd",
+      "bytes": 96110
+    },
+    "TEN": {
+      "sha256": "27cf283fca5b2e9e1c5e995a465a54223424c157d2013b603a6491f99333cf45",
+      "bytes": 50732
+    },
+    "WAS": {
+      "sha256": "2f67805ef9e385a4c67adb0a9320706bd481a52e3aa0e0faea995dad2b501112",
+      "bytes": 30416
+    }
+  }
+}
