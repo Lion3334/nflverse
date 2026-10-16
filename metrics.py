@@ -55,7 +55,7 @@ DIMENSIONS = {
     "st_possession": ("Special Teams — Possession team", "posteam", "st", False),
     "st_opponent": ("Special Teams — Opponent", "defteam", "st", True),
 }
-MEASURES = {"total_epa": "Total EPA", "epa_per_play": "EPA/play", "epa_per_game": "EPA/game"}
+MEASURES = {"total_epa": "Total EPA", "epa_per_100_plays": "EPA/100 plays", "epa_per_game": "EPA/game"}
 
 
 def leaderboard(pbp, schedule, season=2026, through_week=5):
@@ -97,8 +97,11 @@ def leaderboard(pbp, schedule, season=2026, through_week=5):
             # No rank for a team with no completed games.
             pl.when(pl.col("games") > 0).then(pl.col(measure)).rank(
                 method="min", descending=not lower_better).alias(measure + "_rank")
-            for measure in MEASURES
-        ])
+            for measure in ("total_epa", "epa_per_play", "epa_per_game")
+        ]).with_columns(
+            (pl.col("epa_per_play") * 100).alias("epa_per_100_plays"),
+            pl.col("epa_per_play_rank").alias("epa_per_100_plays_rank"),
+        )
         frames.append(frame)
     return pl.concat(frames)
 

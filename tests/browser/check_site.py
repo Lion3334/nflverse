@@ -25,7 +25,7 @@ with sync_playwright() as p:
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.goto(url)
     page.locator('[data-view="leaderboards"]').click()
-    assert page.locator('[data-metric="epa_per_play"]').get_attribute('aria-pressed') == 'true'
+    assert page.locator('[data-metric="epa_per_100_plays"]').get_attribute('aria-pressed') == 'true'
     assert page.locator('.team-icon').count() == 32
     assert page.locator('.point image').count() == 32
     page.evaluate('''async () => {
@@ -41,7 +41,7 @@ with sync_playwright() as p:
     data = json.loads(page.locator('#epa-data').text_content())['rows']
     for dimension in dict.fromkeys(r['dimension'] for r in data):
         page.locator(f'[data-dimension="{dimension}"]').click()
-        for metric in ['total_epa', 'epa_per_play', 'epa_per_game']:
+        for metric in ['total_epa', 'epa_per_100_plays', 'epa_per_game']:
             page.locator(f'[data-metric="{metric}"]').click()
             assert page.locator('#rows tr').count() == 32
             assert page.locator('.point').count() == 32
@@ -65,7 +65,7 @@ with sync_playwright() as p:
                 for b in boxes[i+1:]:
                     assert not (a['x'] < b['x']+b['w'] and a['x']+a['w'] > b['x'] and a['y'] < b['y']+b['h'] and a['y']+a['h'] > b['y'])
     page.locator('[data-dimension="off_total"]').click()
-    page.locator('[data-metric="epa_per_play"]').click()
+    page.locator('[data-metric="epa_per_100_plays"]').click()
     page.locator('.point').first.click()
     assert 'Buffalo Bills' in page.locator('#selection').text_content()
     assert page.locator('#rows tr.selected').count() == 1
@@ -77,12 +77,14 @@ with sync_playwright() as p:
     downloaded = download.value
     rows = list(csv.DictReader(io.StringIO(Path(downloaded.path()).read_text())))
     assert len(rows) == 32 and rows[0]['team'] == 'BUF'
+    assert 'epa_per_100_plays' in rows[0] and 'epa_per_play' not in rows[0]
+    assert abs(float(rows[0]['epa_per_100_plays']) - 100 * next(r['epa_per_play'] for r in data if r['team']=='BUF' and r['dimension']=='off_total')) < 1e-10
     page.reload()
     assert page.locator('[data-dimension="off_total"]').get_attribute('aria-selected') == 'true'
     page.locator('[data-dimension="off_total"]').focus()
     page.keyboard.press('ArrowRight')
     assert page.locator('[data-dimension="def_pass"]').get_attribute('aria-selected') == 'true'
-    page.goto(url + '#dimension=off_total&metric=epa_per_play')
+    page.goto(url + '#dimension=off_total&metric=epa_per_100_plays')
     page.evaluate('document.activeElement.blur()')
     page.locator('.team-icon').evaluate_all('(els)=>Promise.all(els.map(e=>e.decode()))')
     page.screenshot(path='/tmp/nfl-epa-desktop.png', full_page=False)
@@ -90,6 +92,8 @@ with sync_playwright() as p:
     assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
     assert page.locator('.point').count() == 32
     page.screenshot(path='/tmp/nfl-epa-mobile.png', full_page=True)
+    page.goto(url + '#dimension=off_pass&metric=epa_per_play')
+    assert page.locator('[data-metric="epa_per_100_plays"]').get_attribute('aria-pressed') == 'true'
     assert not errors, errors
     browser.close()
 server.shutdown()

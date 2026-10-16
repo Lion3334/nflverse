@@ -16,6 +16,9 @@ def build():
         for key, value in row.items():
             if key not in ('team', 'dimension', 'label'):
                 row[key] = float(value) if value else None
+    for row in rows:
+        row['epa_per_100_plays'] = row['epa_per_play'] * 100 if row['epa_per_play'] is not None else None
+        row['epa_per_100_plays_rank'] = row['epa_per_play_rank']
     if len(rows) != 256 or len({r['team'] for r in rows}) != 32:
         raise ValueError('Expected 32 teams across eight dimensions')
     note = (ROOT / 'reports/epa_2026_through_week_5.md').read_text().splitlines()[2]

@@ -42,7 +42,7 @@ if schedule.filter((pl.col("season") == SEASON) & (pl.col("game_type") == "REG")
 frame = leaderboard(pbp, schedule, SEASON, THROUGH_WEEK)
 st.caption(f"Source retrieved {loaded_at} · nflverse via nflreadpy · {frame['team'].n_unique()} teams")
 st.info("Offense and possession-side special teams: higher is better. Defense and opponent-side special teams EPA allowed: lower is better. #1 is best; ties share ranks.")
-st.caption("EPA/game = total EPA ÷ all completed team games through Week 5, accounting for byes. EPA/play uses only qualifying plays with non-null EPA. No garbage-time or opponent adjustments.")
+st.caption("EPA/game = total EPA ÷ all completed team games through Week 5, accounting for byes. EPA/100 plays = EPA/play × 100, using only qualifying plays with non-null EPA. No garbage-time or opponent adjustments.")
 measure = st.selectbox("Rank and chart by", list(MEASURES), index=1, format_func=MEASURES.get)
 tabs = st.tabs([spec[0] for spec in DIMENSIONS.values()])
 for tab, (key, (label, side, kind, lower_better)) in zip(tabs, DIMENSIONS.items()):
@@ -50,7 +50,7 @@ for tab, (key, (label, side, kind, lower_better)) in zip(tabs, DIMENSIONS.items(
         st.subheader(label)
         if kind == "st":
             st.caption("These are possession roles, not pure kicking/receiving units. On kickoffs the receiving team is posteam; on punts the punting team is posteam. Includes punts, kickoffs, field goals and extra points. Opponent values retain the possession team's EPA sign.")
-            st.caption("Special teams EPA/play is provided for exploration; small samples and differing play mixes limit comparisons.")
+            st.caption("Special teams EPA/100 plays is provided for exploration; small samples and differing play mixes limit comparisons.")
         st.caption(f"{MEASURES[measure]} · {'Lower' if lower_better else 'Higher'} is better")
         ranked = frame.filter(pl.col("dimension") == key).sort(
             [measure, "team"], descending=[not lower_better, False], nulls_last=True)
@@ -59,7 +59,7 @@ for tab, (key, (label, side, kind, lower_better)) in zip(tabs, DIMENSIONS.items(
             columns.extend([m, m + "_rank"])
         config = {"team": "Team", "games": "Games", "plays": "Plays"}
         for m, title in MEASURES.items():
-            config[m] = st.column_config.NumberColumn(title, format="%.3f")
+            config[m] = st.column_config.NumberColumn(title, format="%.2f" if m == "epa_per_100_plays" else "%.3f")
             config[m + "_rank"] = st.column_config.NumberColumn(title + " rank", format="%d")
         st.dataframe(ranked.select(columns), hide_index=True, width="stretch", height=700, column_config=config)
         chart_data = ranked.select("team", measure).to_dicts()

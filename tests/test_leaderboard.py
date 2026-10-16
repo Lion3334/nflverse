@@ -20,6 +20,8 @@ def test_inclusive_cutoff_and_three_measures():
     assert row['plays'] == 3
     assert row['games'] == 2  # A bye does not count as a game.
     assert row['epa_per_play'] == pytest.approx(2 / 3)
+    assert row['epa_per_100_plays'] == pytest.approx(200 / 3)
+    assert row['epa_per_100_plays_rank'] == row['epa_per_play_rank']
     assert row['epa_per_game'] == 1
     assert result.height == 16  # Two teams, eight dimensions.
 
@@ -33,9 +35,12 @@ def test_special_teams_roles_raw_sign_and_denominators():
     opponent = result.filter((pl.col('team') == 'GB') & (pl.col('dimension') == 'st_opponent')).to_dicts()[0]
     assert possession['total_epa'] == 6
     assert possession['epa_per_play'] == 6
+    assert possession['epa_per_100_plays'] == 600
     assert possession['epa_per_game'] == 3  # All games, not only games with ST plays.
     assert opponent['total_epa'] == -2
     assert opponent['epa_per_play'] == -2
+    assert opponent['epa_per_100_plays'] == -200
+    assert opponent['epa_per_100_plays_rank'] == opponent['epa_per_play_rank']
     assert opponent['epa_per_game'] == -1
     assert opponent['epa_per_game_rank'] == 1
 
@@ -45,6 +50,7 @@ def test_empty_categories_no_divide_by_zero_and_rank_ties():
     rush = result.filter(pl.col('dimension') == 'off_rush')
     assert rush['plays'].to_list() == [0, 0]
     assert rush['epa_per_play'].null_count() == 2
+    assert rush['epa_per_100_plays'].null_count() == 2
     assert rush['total_epa_rank'].to_list() == [1, 1]
     assert rush['epa_per_game'].to_list() == [0, 0]
 

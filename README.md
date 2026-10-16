@@ -1,6 +1,6 @@
 # NFL EPA Lab
 
-A standalone HTML site with **Matchups** as the default view and **EPA Leaderboards** as a second top-level section. The leaderboard has eight dimension tabs, three metric toggles (EPA/play by default), and a horizontal team-distance plot above each table. Best teams are always on the right; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Real team logos appear in the plot and table, with names and abbreviations for clarity. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
+A standalone HTML site with **Matchups** as the default view and **EPA Leaderboards** as a second top-level section. The leaderboard has eight dimension tabs, three metric toggles (EPA/100 plays by default), and a horizontal team-distance plot above each table. Best teams are always on the right; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Real team logos appear in the plot and table, with names and abbreviations for clarity. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
 
 ![Matchups site preview](docs/matchups-preview.png)
 
@@ -20,11 +20,11 @@ For a hosted site, enable **Settings → Pages → Deploy from a branch → main
 
 ## Matchups and the current week
 
-The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows team logos, away/home roles, saved FanDuel spread/total panels, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. Bye teams are listed below the slate.
+The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows two compact possession tables (Total/Pass/Rush columns, offense/defense rows), a 2×2 special teams table (team rows, possession/opponent columns), team logos, saved FanDuel spread/total panels, and stadium with city/state (or city/country for international games). Venue locations are maintained in `venue_locations.py`, keyed by stadium rather than home team; unknown venues display Location TBD. Bye teams are listed below the slate.
 
 The opening week is calculated in the browser at visit time, not at build time. NFL weeks roll over **Tuesday at midnight America/New_York**, using the first scheduled game of each week to locate that Tuesday. October 16, 2026 selects Week 6. Before the season, Week 1 is selected; after the published season, the final week is selected. Explicit week links preserve the chosen week. The page also checks for a new week while left open.
 
-The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. This schedule view does not apply the fixed Week 5 EPA snapshot to historical or future matchups. Leaderboards retain their separate Week 5 scope. Old leaderboard links still work.
+The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. Matchup cells show the selected EPA value and league rank, with a continuous rank-based heat map (green = stronger, red = weaker). Defense and opponent-side special teams use lower-is-better ranks. On mobile the tables stack. EPA data remains through Week 5: Weeks 1–5 leave matchup EPA unavailable to avoid hindsight; Week 6 and later clearly label the saved through-Week-5 snapshot. Historical pregame snapshots have not been generated. The metric selector is shared with the leaderboard and persists in links. Old leaderboard links still work.
 
 ## FanDuel betting quotes and refresh schedule
 
@@ -79,11 +79,11 @@ python -m venv .venv
 .venv/bin/streamlit run app.py --server.address 0.0.0.0
 ```
 
-Eight dimension tabs: offense pass/rush/total, defense pass/rush/total, special teams possession-side/opponent-side. Every team has total EPA, EPA/play, EPA/game, separate ranks for each measure, play count, and game count. Select the measure to rank and chart; tables are also sortable by clicking headers. All dimensions are downloadable as CSV. Bars retain real EPA distances and are centered on zero.
+Eight dimension tabs: offense pass/rush/total, defense pass/rush/total, special teams possession-side/opponent-side. Every team has total EPA, EPA/100 plays, EPA/game, separate ranks for each measure, play count, and game count. Select the measure to rank and chart; tables are also sortable by clicking headers. All dimensions are downloadable as CSV. Bars retain real EPA distances and are centered on zero.
 
-Offense: higher is better. Defense retains raw EPA allowed: lower is better. Special teams possession-side EPA uses `posteam` and higher is better; opponent-side EPA uses `defteam` and lower is better. These are **not fixed kicking and receiving units**: on kickoffs the receiving team is posteam; on punts the punting team is posteam. Includes punts, kickoffs, field goals and extra points. Possession total minus opponent total produces net special teams EPA. ST EPA/play is exploratory; samples and play mixes differ.
+Offense: higher is better. Defense retains raw EPA allowed: lower is better. Special teams possession-side EPA uses `posteam` and higher is better; opponent-side EPA uses `defteam` and lower is better. These are **not fixed kicking and receiving units**: on kickoffs the receiving team is posteam; on punts the punting team is posteam. Includes punts, kickoffs, field goals and extra points. Possession total minus opponent total produces net special teams EPA. ST EPA/100 plays is exploratory; samples and play mixes differ.
 
-EPA/play = sum of EPA / count of qualifying plays with non-null EPA. EPA/game = sum of EPA / all completed team games in weeks 1–5, including games with no plays in a particular dimension, accounting for byes. No plays yields null EPA/play; no games yields null EPA/game and no rank. Ties use competition ranks. Pass/rush flags follow nflverse, including sacks and scrambles. No garbage-time or opponent adjustments.
+EPA/100 plays = 100 × sum of EPA / count of qualifying plays with non-null EPA. This is exactly EPA/play multiplied by 100, with the same ranks and heat-map colors. It is a rate, not a projection of a 100-play game. Raw `epa_per_play` and its rank remain in the underlying CSV/API for compatibility; the product controls, plots, and downloadable leaderboard tables use `epa_per_100_plays` and its rank. EPA/game = sum of EPA / all completed team games in weeks 1–5, including games with no plays in a particular dimension, accounting for byes. No plays yields null EPA/100 plays; no games yields null EPA/game and no rank. Ties use competition ranks. Pass/rush flags follow nflverse, including sacks and scrambles. No garbage-time or opponent adjustments.
 
 Data loads through nflreadpy, refreshed hourly or through the sidebar button. Ignored raw Parquet caches live in `data/raw/`. Only completed games are aggregated; missing play-by-play for completed games blocks the dashboard. Current completeness checks detect entirely missing games, not partial files. The date filter excludes future weeks but uses current stat corrections, not an archived historical snapshot. Network access to GitHub and its release asset hosts is required. Source retrieval time is displayed.
 
@@ -106,6 +106,7 @@ Exports produce the reviewable Markdown/CSV EPA snapshots and `schedule_2026.jso
 .venv/bin/python tests/browser/check_site.py
 .venv/bin/python tests/browser/check_matchups.py
 .venv/bin/python tests/browser/check_odds.py
+.venv/bin/python tests/browser/check_matchup_tables.py
 ```
 
 The leaderboard browser check serves the static site temporarily and verifies all 24 dimension/metric combinations, exact linear horizontal positions, label separation, correct sorting, keyboard interaction, team highlighting, CSV download, URL state, and mobile overflow.
@@ -113,6 +114,8 @@ The leaderboard browser check serves the static site temporarily and verifies al
 The matchup browser check covers all 272 games and 18 weeks, chronological ordering, every week rollover including DST, default Week 6, pre/post-season bounds, explicit-week links, week navigation, local kickoff times in Los Angeles and Tokyo, mobile layout, and backward-compatible leaderboard links.
 
 Odds tests cover Pacific schedule slots across DST, duplicate-run guards, strict Sunday opening cutoffs, immutable weekly openings and first observations, line movement, home/away sign conventions, missing markets, stale updates, pregame-only captures, bookmaker isolation, and credential-safe errors. The browser test checks real FanDuel quotes, pending/missed openings, plus injected synthetic quotes (never saved to the product), favorite changes, totals, Pick’em, stale warnings, and no browser API calls.
+
+The three-table browser check verifies all 224 Week 6 cells across all three metrics, correct offense/defense pairings, special teams, rank/color consistency, the 100× conversion, historical unavailable states, shared selectors, preserved FanDuel panels, and desktop/tablet/mobile layouts. The original `designs/` files remain archived mockups; `docs/index.html` is the current product.
 
 ## Logos
 
