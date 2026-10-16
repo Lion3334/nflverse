@@ -2,6 +2,8 @@
 from datetime import date, datetime, time, timedelta, timezone
 from zoneinfo import ZoneInfo
 
+from venue_locations import STADIUM_LOCATIONS
+
 EASTERN = ZoneInfo('America/New_York')
 ROUND_NAMES = {'REG': 'Week', 'WC': 'Wild Card', 'DIV': 'Divisional', 'CON': 'Conference Championships', 'SB': 'Super Bowl'}
 
@@ -22,6 +24,7 @@ def schedule_payload(records, season=2026):
         game = dict(game_id=row['game_id'], week_key=key, week=number, game_type=kind,
                     gameday=day, kickoff=kickoff, away_team=row['away_team'],
                     home_team=row['home_team'], stadium=row.get('stadium'),
+                    venue_location=STADIUM_LOCATIONS.get(row.get('stadium')),
                     neutral=row.get('location') == 'Neutral')
         games.append(game)
         grouped.setdefault(key, dict(key=key, week=number, game_type=kind, label=label, days=[]))['days'].append(day)

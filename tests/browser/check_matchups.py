@@ -36,6 +36,10 @@ with sync_playwright() as p:
         cards = page.locator('.game-card')
         expected = [g for g in data['games'] if g['week_key'] == week['key']]
         assert cards.count() == len(expected)
+        for game in expected:
+            venue = page.locator(f'[data-game="{game["game_id"]}"] .game-venue').text_content()
+            assert game['stadium'] + ' | ' + game['venue_location'] in venue
+
         actual = cards.evaluate_all('(els)=>els.map(e=>({id:e.dataset.game,time:e.dataset.kickoff}))')
         all_ids += [a['id'] for a in actual]
         times = [a['time'] for a in actual if a['time']]

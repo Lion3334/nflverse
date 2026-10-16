@@ -193,7 +193,8 @@
       "away_team": "NE",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_01_SF_LA",
@@ -205,7 +206,8 @@
       "away_team": "SF",
       "home_team": "LA",
       "stadium": "Melbourne Cricket Ground",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "Melbourne, Australia"
     },
     {
       "game_id": "2026_01_ATL_PIT",
@@ -217,7 +219,8 @@
       "away_team": "ATL",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_01_BAL_IND",
@@ -229,7 +232,8 @@
       "away_team": "BAL",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_01_BUF_HOU",
@@ -241,7 +245,8 @@
       "away_team": "BUF",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     },
     {
       "game_id": "2026_01_CHI_CAR",
@@ -253,7 +258,8 @@
       "away_team": "CHI",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_01_CLE_JAX",
@@ -265,7 +271,8 @@
       "away_team": "CLE",
       "home_team": "JAX",
       "stadium": "EverBank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Jacksonville, FL"
     },
     {
       "game_id": "2026_01_NO_DET",
@@ -277,7 +284,8 @@
       "away_team": "NO",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_01_NYJ_TEN",
@@ -289,7 +297,8 @@
       "away_team": "NYJ",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_01_TB_CIN",
@@ -301,7 +310,8 @@
       "away_team": "TB",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_01_ARI_LAC",
@@ -313,7 +323,8 @@
       "away_team": "ARI",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_01_GB_MIN",
@@ -325,7 +336,8 @@
       "away_team": "GB",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_01_MIA_LV",
@@ -337,7 +349,8 @@
       "away_team": "MIA",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_01_WAS_PHI",
@@ -349,7 +362,8 @@
       "away_team": "WAS",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_01_DAL_NYG",
@@ -361,7 +375,8 @@
       "away_team": "DAL",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_01_DEN_KC",
@@ -373,7 +388,8 @@
       "away_team": "DEN",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_02_DET_BUF",
@@ -385,7 +401,8 @@
       "away_team": "DET",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_02_CAR_ATL",
@@ -397,7 +414,8 @@
       "away_team": "CAR",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_02_CIN_HOU",
@@ -409,7 +427,8 @@
       "away_team": "CIN",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     },
     {
       "game_id": "2026_02_CLE_TB",
@@ -421,7 +440,8 @@
       "away_team": "CLE",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_02_GB_NYJ",
@@ -433,7 +453,8 @@
       "away_team": "GB",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_02_MIN_CHI",
@@ -445,7 +466,8 @@
       "away_team": "MIN",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_02_NO_BAL",
@@ -457,7 +479,8 @@
       "away_team": "NO",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_02_PHI_TEN",
@@ -469,7 +492,8 @@
       "away_team": "PHI",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_02_PIT_NE",
@@ -481,7 +505,8 @@
       "away_team": "PIT",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_02_JAX_DEN",
@@ -493,7 +518,8 @@
       "away_team": "JAX",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_02_LV_LAC",
@@ -505,7 +531,8 @@
       "away_team": "LV",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_02_MIA_SF",
@@ -517,7 +544,8 @@
       "away_team": "MIA",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_02_SEA_ARI",
@@ -529,7 +557,8 @@
       "away_team": "SEA",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_02_WAS_DAL",
@@ -541,7 +570,8 @@
       "away_team": "WAS",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_02_IND_KC",
@@ -553,7 +583,8 @@
       "away_team": "IND",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_02_NYG_LA",
@@ -565,7 +596,8 @@
       "away_team": "NYG",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_03_ATL_GB",
@@ -577,7 +609,8 @@
       "away_team": "ATL",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_03_CAR_CLE",
@@ -589,7 +622,8 @@
       "away_team": "CAR",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_03_CIN_PIT",
@@ -601,7 +635,8 @@
       "away_team": "CIN",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_03_HOU_IND",
@@ -613,7 +648,8 @@
       "away_team": "HOU",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_03_KC_MIA",
@@ -625,7 +661,8 @@
       "away_team": "KC",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_03_LAC_BUF",
@@ -637,7 +674,8 @@
       "away_team": "LAC",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_03_NE_JAX",
@@ -649,7 +687,8 @@
       "away_team": "NE",
       "home_team": "JAX",
       "stadium": "EverBank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Jacksonville, FL"
     },
     {
       "game_id": "2026_03_NYJ_DET",
@@ -661,7 +700,8 @@
       "away_team": "NYJ",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_03_SEA_WAS",
@@ -673,7 +713,8 @@
       "away_team": "SEA",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_03_TEN_NYG",
@@ -685,7 +726,8 @@
       "away_team": "TEN",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_03_ARI_SF",
@@ -697,7 +739,8 @@
       "away_team": "ARI",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_03_MIN_TB",
@@ -709,7 +752,8 @@
       "away_team": "MIN",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_03_BAL_DAL",
@@ -721,7 +765,8 @@
       "away_team": "BAL",
       "home_team": "DAL",
       "stadium": "Maracana Stadium",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "Rio de Janeiro, Brazil"
     },
     {
       "game_id": "2026_03_LV_NO",
@@ -733,7 +778,8 @@
       "away_team": "LV",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_03_LA_DEN",
@@ -745,7 +791,8 @@
       "away_team": "LA",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_03_PHI_CHI",
@@ -757,7 +804,8 @@
       "away_team": "PHI",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_04_PIT_CLE",
@@ -769,7 +817,8 @@
       "away_team": "PIT",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_04_IND_WAS",
@@ -781,7 +830,8 @@
       "away_team": "IND",
       "home_team": "WAS",
       "stadium": "Tottenham Hotspur Stadium",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "London, England"
     },
     {
       "game_id": "2026_04_ARI_NYG",
@@ -793,7 +843,8 @@
       "away_team": "ARI",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_04_DAL_HOU",
@@ -805,7 +856,8 @@
       "away_team": "DAL",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     },
     {
       "game_id": "2026_04_GB_TB",
@@ -817,7 +869,8 @@
       "away_team": "GB",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_04_JAX_CIN",
@@ -829,7 +882,8 @@
       "away_team": "JAX",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_04_LA_PHI",
@@ -841,7 +895,8 @@
       "away_team": "LA",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_04_NE_BUF",
@@ -853,7 +908,8 @@
       "away_team": "NE",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_04_NYJ_CHI",
@@ -865,7 +921,8 @@
       "away_team": "NYJ",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_04_TEN_BAL",
@@ -877,7 +934,8 @@
       "away_team": "TEN",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_04_MIA_MIN",
@@ -889,7 +947,8 @@
       "away_team": "MIA",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_04_DEN_SF",
@@ -901,7 +960,8 @@
       "away_team": "DEN",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_04_KC_LV",
@@ -913,7 +973,8 @@
       "away_team": "KC",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_04_LAC_SEA",
@@ -925,7 +986,8 @@
       "away_team": "LAC",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_04_DET_CAR",
@@ -937,7 +999,8 @@
       "away_team": "DET",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_04_ATL_NO",
@@ -949,7 +1012,8 @@
       "away_team": "ATL",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_05_TB_DAL",
@@ -961,7 +1025,8 @@
       "away_team": "TB",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_05_PHI_JAX",
@@ -973,7 +1038,8 @@
       "away_team": "PHI",
       "home_team": "JAX",
       "stadium": "Tottenham Hotspur Stadium",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "London, England"
     },
     {
       "game_id": "2026_05_CHI_GB",
@@ -985,7 +1051,8 @@
       "away_team": "CHI",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_05_CIN_MIA",
@@ -997,7 +1064,8 @@
       "away_team": "CIN",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_05_CLE_NYJ",
@@ -1009,7 +1077,8 @@
       "away_team": "CLE",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_05_HOU_TEN",
@@ -1021,7 +1090,8 @@
       "away_team": "HOU",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_05_IND_PIT",
@@ -1033,7 +1103,8 @@
       "away_team": "IND",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_05_LV_NE",
@@ -1045,7 +1116,8 @@
       "away_team": "LV",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_05_MIN_NO",
@@ -1057,7 +1129,8 @@
       "away_team": "MIN",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_05_NYG_WAS",
@@ -1069,7 +1142,8 @@
       "away_team": "NYG",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_05_DEN_LAC",
@@ -1081,7 +1155,8 @@
       "away_team": "DEN",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_05_DET_ARI",
@@ -1093,7 +1168,8 @@
       "away_team": "DET",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_05_SF_SEA",
@@ -1105,7 +1181,8 @@
       "away_team": "SF",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_05_BAL_ATL",
@@ -1117,7 +1194,8 @@
       "away_team": "BAL",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_05_BUF_LA",
@@ -1129,7 +1207,8 @@
       "away_team": "BUF",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_06_SEA_DEN",
@@ -1141,7 +1220,8 @@
       "away_team": "SEA",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_06_HOU_JAX",
@@ -1153,7 +1233,8 @@
       "away_team": "HOU",
       "home_team": "JAX",
       "stadium": "Wembley Stadium",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "London, England"
     },
     {
       "game_id": "2026_06_BAL_CLE",
@@ -1165,7 +1246,8 @@
       "away_team": "BAL",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_06_CAR_PHI",
@@ -1177,7 +1259,8 @@
       "away_team": "CAR",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_06_CHI_ATL",
@@ -1189,7 +1272,8 @@
       "away_team": "CHI",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_06_NO_NYG",
@@ -1201,7 +1285,8 @@
       "away_team": "NO",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_06_NYJ_NE",
@@ -1213,7 +1298,8 @@
       "away_team": "NYJ",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_06_PIT_TB",
@@ -1225,7 +1311,8 @@
       "away_team": "PIT",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_06_TEN_IND",
@@ -1237,7 +1324,8 @@
       "away_team": "TEN",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_06_ARI_LA",
@@ -1249,7 +1337,8 @@
       "away_team": "ARI",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_06_BUF_LV",
@@ -1261,7 +1350,8 @@
       "away_team": "BUF",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_06_LAC_KC",
@@ -1273,7 +1363,8 @@
       "away_team": "LAC",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_06_DAL_GB",
@@ -1285,7 +1376,8 @@
       "away_team": "DAL",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_06_WAS_SF",
@@ -1297,7 +1389,8 @@
       "away_team": "WAS",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_07_NE_CHI",
@@ -1309,7 +1402,8 @@
       "away_team": "NE",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_07_PIT_NO",
@@ -1321,7 +1415,8 @@
       "away_team": "PIT",
       "home_team": "NO",
       "stadium": "Stade de France",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "Saint-Denis, France"
     },
     {
       "game_id": "2026_07_CIN_BAL",
@@ -1333,7 +1428,8 @@
       "away_team": "CIN",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_07_CLE_TEN",
@@ -1345,7 +1441,8 @@
       "away_team": "CLE",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_07_IND_MIN",
@@ -1357,7 +1454,8 @@
       "away_team": "IND",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_07_MIA_NYJ",
@@ -1369,7 +1467,8 @@
       "away_team": "MIA",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_07_NYG_HOU",
@@ -1381,7 +1480,8 @@
       "away_team": "NYG",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     },
     {
       "game_id": "2026_07_SF_ATL",
@@ -1393,7 +1493,8 @@
       "away_team": "SF",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_07_TB_CAR",
@@ -1405,7 +1506,8 @@
       "away_team": "TB",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_07_DEN_ARI",
@@ -1417,7 +1519,8 @@
       "away_team": "DEN",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_07_GB_DET",
@@ -1429,7 +1532,8 @@
       "away_team": "GB",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_07_LA_LV",
@@ -1441,7 +1545,8 @@
       "away_team": "LA",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_07_KC_SEA",
@@ -1453,7 +1558,8 @@
       "away_team": "KC",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_07_DAL_PHI",
@@ -1465,7 +1571,8 @@
       "away_team": "DAL",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_08_CAR_GB",
@@ -1477,7 +1584,8 @@
       "away_team": "CAR",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_08_ARI_DAL",
@@ -1489,7 +1597,8 @@
       "away_team": "ARI",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_08_ATL_TB",
@@ -1501,7 +1610,8 @@
       "away_team": "ATL",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_08_BAL_BUF",
@@ -1513,7 +1623,8 @@
       "away_team": "BAL",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_08_CLE_PIT",
@@ -1525,7 +1636,8 @@
       "away_team": "CLE",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_08_IND_JAX",
@@ -1537,7 +1649,8 @@
       "away_team": "IND",
       "home_team": "JAX",
       "stadium": "EverBank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Jacksonville, FL"
     },
     {
       "game_id": "2026_08_LV_NYJ",
@@ -1549,7 +1662,8 @@
       "away_team": "LV",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_08_MIN_DET",
@@ -1561,7 +1675,8 @@
       "away_team": "MIN",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_08_TEN_CIN",
@@ -1573,7 +1688,8 @@
       "away_team": "TEN",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_08_LAC_LA",
@@ -1585,7 +1701,8 @@
       "away_team": "LAC",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_08_KC_DEN",
@@ -1597,7 +1714,8 @@
       "away_team": "KC",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_08_NE_MIA",
@@ -1609,7 +1727,8 @@
       "away_team": "NE",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_08_PHI_WAS",
@@ -1621,7 +1740,8 @@
       "away_team": "PHI",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_08_CHI_SEA",
@@ -1633,7 +1753,8 @@
       "away_team": "CHI",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_09_JAX_BAL",
@@ -1645,7 +1766,8 @@
       "away_team": "JAX",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_09_CIN_ATL",
@@ -1657,7 +1779,8 @@
       "away_team": "CIN",
       "home_team": "ATL",
       "stadium": "Bernabeu",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "Madrid, Spain"
     },
     {
       "game_id": "2026_09_CLE_NO",
@@ -1669,7 +1792,8 @@
       "away_team": "CLE",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_09_DAL_IND",
@@ -1681,7 +1805,8 @@
       "away_team": "DAL",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_09_DEN_CAR",
@@ -1693,7 +1818,8 @@
       "away_team": "DEN",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_09_DET_MIA",
@@ -1705,7 +1831,8 @@
       "away_team": "DET",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_09_LA_WAS",
@@ -1717,7 +1844,8 @@
       "away_team": "LA",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_09_NYG_PHI",
@@ -1729,7 +1857,8 @@
       "away_team": "NYG",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_09_NYJ_KC",
@@ -1741,7 +1870,8 @@
       "away_team": "NYJ",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_09_HOU_LAC",
@@ -1753,7 +1883,8 @@
       "away_team": "HOU",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_09_LV_SF",
@@ -1765,7 +1896,8 @@
       "away_team": "LV",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_09_ARI_SEA",
@@ -1777,7 +1909,8 @@
       "away_team": "ARI",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_09_GB_NE",
@@ -1789,7 +1922,8 @@
       "away_team": "GB",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_09_TB_CHI",
@@ -1801,7 +1935,8 @@
       "away_team": "TB",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_09_BUF_MIN",
@@ -1813,7 +1948,8 @@
       "away_team": "BUF",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_10_WAS_NYG",
@@ -1825,7 +1961,8 @@
       "away_team": "WAS",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_10_NE_DET",
@@ -1837,7 +1974,8 @@
       "away_team": "NE",
       "home_team": "DET",
       "stadium": "FC Bayern Munich Stadium",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "Munich, Germany"
     },
     {
       "game_id": "2026_10_BUF_NYJ",
@@ -1849,7 +1987,8 @@
       "away_team": "BUF",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_10_CAR_NO",
@@ -1861,7 +2000,8 @@
       "away_team": "CAR",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_10_HOU_CLE",
@@ -1873,7 +2013,8 @@
       "away_team": "HOU",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_10_JAX_TEN",
@@ -1885,7 +2026,8 @@
       "away_team": "JAX",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_10_KC_ATL",
@@ -1897,7 +2039,8 @@
       "away_team": "KC",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_10_MIA_IND",
@@ -1909,7 +2052,8 @@
       "away_team": "MIA",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_10_MIN_GB",
@@ -1921,7 +2065,8 @@
       "away_team": "MIN",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_10_LA_ARI",
@@ -1933,7 +2078,8 @@
       "away_team": "LA",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_10_SEA_LV",
@@ -1945,7 +2091,8 @@
       "away_team": "SEA",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_10_SF_DAL",
@@ -1957,7 +2104,8 @@
       "away_team": "SF",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_10_PIT_CIN",
@@ -1969,7 +2117,8 @@
       "away_team": "PIT",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_10_LAC_BAL",
@@ -1981,7 +2130,8 @@
       "away_team": "LAC",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_11_IND_HOU",
@@ -1993,7 +2143,8 @@
       "away_team": "IND",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     },
     {
       "game_id": "2026_11_ARI_KC",
@@ -2005,7 +2156,8 @@
       "away_team": "ARI",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_11_BAL_CAR",
@@ -2017,7 +2169,8 @@
       "away_team": "BAL",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_11_JAX_NYG",
@@ -2029,7 +2182,8 @@
       "away_team": "JAX",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_11_MIA_BUF",
@@ -2041,7 +2195,8 @@
       "away_team": "MIA",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_11_NO_CHI",
@@ -2053,7 +2208,8 @@
       "away_team": "NO",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_11_TB_DET",
@@ -2065,7 +2221,8 @@
       "away_team": "TB",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_11_TEN_DAL",
@@ -2077,7 +2234,8 @@
       "away_team": "TEN",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_11_NYJ_LAC",
@@ -2089,7 +2247,8 @@
       "away_team": "NYJ",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_11_LV_DEN",
@@ -2101,7 +2260,8 @@
       "away_team": "LV",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_11_PIT_PHI",
@@ -2113,7 +2273,8 @@
       "away_team": "PIT",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_11_MIN_SF",
@@ -2125,7 +2286,8 @@
       "away_team": "MIN",
       "home_team": "SF",
       "stadium": "Estadio Banorte",
-      "neutral": true
+      "neutral": true,
+      "venue_location": "Mexico City, Mexico"
     },
     {
       "game_id": "2026_11_CIN_WAS",
@@ -2137,7 +2299,8 @@
       "away_team": "CIN",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_12_GB_LA",
@@ -2149,7 +2312,8 @@
       "away_team": "GB",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_12_CHI_DET",
@@ -2161,7 +2325,8 @@
       "away_team": "CHI",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_12_PHI_DAL",
@@ -2173,7 +2338,8 @@
       "away_team": "PHI",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_12_KC_BUF",
@@ -2185,7 +2351,8 @@
       "away_team": "KC",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_12_DEN_PIT",
@@ -2197,7 +2364,8 @@
       "away_team": "DEN",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_12_ATL_MIN",
@@ -2209,7 +2377,8 @@
       "away_team": "ATL",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_12_BAL_HOU",
@@ -2221,7 +2390,8 @@
       "away_team": "BAL",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     },
     {
       "game_id": "2026_12_LV_CLE",
@@ -2233,7 +2403,8 @@
       "away_team": "LV",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_12_NO_CIN",
@@ -2245,7 +2416,8 @@
       "away_team": "NO",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_12_NYG_IND",
@@ -2257,7 +2429,8 @@
       "away_team": "NYG",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_12_NYJ_MIA",
@@ -2269,7 +2442,8 @@
       "away_team": "NYJ",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_12_TEN_JAX",
@@ -2281,7 +2455,8 @@
       "away_team": "TEN",
       "home_team": "JAX",
       "stadium": "EverBank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Jacksonville, FL"
     },
     {
       "game_id": "2026_12_SEA_SF",
@@ -2293,7 +2468,8 @@
       "away_team": "SEA",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_12_WAS_ARI",
@@ -2305,7 +2481,8 @@
       "away_team": "WAS",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_12_NE_LAC",
@@ -2317,7 +2494,8 @@
       "away_team": "NE",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_12_CAR_TB",
@@ -2329,7 +2507,8 @@
       "away_team": "CAR",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_13_KC_LA",
@@ -2341,7 +2520,8 @@
       "away_team": "KC",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_13_CIN_CLE",
@@ -2353,7 +2533,8 @@
       "away_team": "CIN",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_13_DET_ATL",
@@ -2365,7 +2546,8 @@
       "away_team": "DET",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_13_GB_NO",
@@ -2377,7 +2559,8 @@
       "away_team": "GB",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_13_JAX_CHI",
@@ -2389,7 +2572,8 @@
       "away_team": "JAX",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_13_LAC_TB",
@@ -2401,7 +2585,8 @@
       "away_team": "LAC",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_13_SF_NYG",
@@ -2413,7 +2598,8 @@
       "away_team": "SF",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_13_WAS_TEN",
@@ -2425,7 +2611,8 @@
       "away_team": "WAS",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_13_MIA_DEN",
@@ -2437,7 +2624,8 @@
       "away_team": "MIA",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_13_PHI_ARI",
@@ -2449,7 +2637,8 @@
       "away_team": "PHI",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_13_BUF_NE",
@@ -2461,7 +2650,8 @@
       "away_team": "BUF",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_13_CAR_MIN",
@@ -2473,7 +2663,8 @@
       "away_team": "CAR",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_13_HOU_PIT",
@@ -2485,7 +2676,8 @@
       "away_team": "HOU",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_13_DAL_SEA",
@@ -2497,7 +2689,8 @@
       "away_team": "DAL",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_14_MIN_NE",
@@ -2509,7 +2702,8 @@
       "away_team": "MIN",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_14_ATL_CLE",
@@ -2521,7 +2715,8 @@
       "away_team": "ATL",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_14_CHI_MIA",
@@ -2533,7 +2728,8 @@
       "away_team": "CHI",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_14_DEN_NYJ",
@@ -2545,7 +2741,8 @@
       "away_team": "DEN",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_14_HOU_WAS",
@@ -2557,7 +2754,8 @@
       "away_team": "HOU",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_14_IND_PHI",
@@ -2569,7 +2767,8 @@
       "away_team": "IND",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_14_NO_CAR",
@@ -2581,7 +2780,8 @@
       "away_team": "NO",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_14_TB_BAL",
@@ -2593,7 +2793,8 @@
       "away_team": "TB",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_14_TEN_DET",
@@ -2605,7 +2806,8 @@
       "away_team": "TEN",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_14_LAC_LV",
@@ -2617,7 +2819,8 @@
       "away_team": "LAC",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_14_KC_CIN",
@@ -2629,7 +2832,8 @@
       "away_team": "KC",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_14_LA_SF",
@@ -2641,7 +2845,8 @@
       "away_team": "LA",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_14_NYG_SEA",
@@ -2653,7 +2858,8 @@
       "away_team": "NYG",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_14_BUF_GB",
@@ -2665,7 +2871,8 @@
       "away_team": "BUF",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_14_PIT_JAX",
@@ -2677,7 +2884,8 @@
       "away_team": "PIT",
       "home_team": "JAX",
       "stadium": "EverBank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Jacksonville, FL"
     },
     {
       "game_id": "2026_15_SF_LAC",
@@ -2689,7 +2897,8 @@
       "away_team": "SF",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_15_SEA_PHI",
@@ -2701,7 +2910,8 @@
       "away_team": "SEA",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_15_CHI_BUF",
@@ -2713,7 +2923,8 @@
       "away_team": "CHI",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_15_ATL_WAS",
@@ -2725,7 +2936,8 @@
       "away_team": "ATL",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_15_BAL_PIT",
@@ -2737,7 +2949,8 @@
       "away_team": "BAL",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_15_CIN_CAR",
@@ -2749,7 +2962,8 @@
       "away_team": "CIN",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_15_CLE_NYG",
@@ -2761,7 +2975,8 @@
       "away_team": "CLE",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_15_IND_TEN",
@@ -2773,7 +2988,8 @@
       "away_team": "IND",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_15_JAX_HOU",
@@ -2785,7 +3001,8 @@
       "away_team": "JAX",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     },
     {
       "game_id": "2026_15_MIA_GB",
@@ -2797,7 +3014,8 @@
       "away_team": "MIA",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_15_NO_TB",
@@ -2809,7 +3027,8 @@
       "away_team": "NO",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_15_NYJ_ARI",
@@ -2821,7 +3040,8 @@
       "away_team": "NYJ",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_15_DAL_LA",
@@ -2833,7 +3053,8 @@
       "away_team": "DAL",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_15_DEN_LV",
@@ -2845,7 +3066,8 @@
       "away_team": "DEN",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_15_DET_MIN",
@@ -2857,7 +3079,8 @@
       "away_team": "DET",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_15_NE_KC",
@@ -2869,7 +3092,8 @@
       "away_team": "NE",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_16_HOU_PHI",
@@ -2881,7 +3105,8 @@
       "away_team": "HOU",
       "home_team": "PHI",
       "stadium": "Lincoln Financial Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Philadelphia, PA"
     },
     {
       "game_id": "2026_16_GB_CHI",
@@ -2893,7 +3118,8 @@
       "away_team": "GB",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_16_BUF_DEN",
@@ -2905,7 +3131,8 @@
       "away_team": "BUF",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_16_LA_SEA",
@@ -2917,7 +3144,8 @@
       "away_team": "LA",
       "home_team": "SEA",
       "stadium": "Lumen Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Seattle, WA"
     },
     {
       "game_id": "2026_16_ARI_NO",
@@ -2929,7 +3157,8 @@
       "away_team": "ARI",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_16_CAR_PIT",
@@ -2941,7 +3170,8 @@
       "away_team": "CAR",
       "home_team": "PIT",
       "stadium": "Acrisure Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Pittsburgh, PA"
     },
     {
       "game_id": "2026_16_CIN_IND",
@@ -2953,7 +3183,8 @@
       "away_team": "CIN",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_16_CLE_BAL",
@@ -2965,7 +3196,8 @@
       "away_team": "CLE",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_16_LAC_MIA",
@@ -2977,7 +3209,8 @@
       "away_team": "LAC",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_16_NE_NYJ",
@@ -2989,7 +3222,8 @@
       "away_team": "NE",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_16_TB_ATL",
@@ -3001,7 +3235,8 @@
       "away_team": "TB",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_16_WAS_MIN",
@@ -3013,7 +3248,8 @@
       "away_team": "WAS",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_16_TEN_LV",
@@ -3025,7 +3261,8 @@
       "away_team": "TEN",
       "home_team": "LV",
       "stadium": "Allegiant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Paradise, NV"
     },
     {
       "game_id": "2026_16_SF_KC",
@@ -3037,7 +3274,8 @@
       "away_team": "SF",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_16_JAX_DAL",
@@ -3049,7 +3287,8 @@
       "away_team": "JAX",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_16_NYG_DET",
@@ -3061,7 +3300,8 @@
       "away_team": "NYG",
       "home_team": "DET",
       "stadium": "Ford Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Detroit, MI"
     },
     {
       "game_id": "2026_17_BAL_CIN",
@@ -3073,7 +3313,8 @@
       "away_team": "BAL",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_17_BUF_MIA",
@@ -3085,7 +3326,8 @@
       "away_team": "BUF",
       "home_team": "MIA",
       "stadium": "Hard Rock Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Miami Gardens, FL"
     },
     {
       "game_id": "2026_17_DEN_NE",
@@ -3097,7 +3339,8 @@
       "away_team": "DEN",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_17_IND_CLE",
@@ -3109,7 +3352,8 @@
       "away_team": "IND",
       "home_team": "CLE",
       "stadium": "Huntington Bank Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cleveland, OH"
     },
     {
       "game_id": "2026_17_KC_LAC",
@@ -3121,7 +3365,8 @@
       "away_team": "KC",
       "home_team": "LAC",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_17_LA_TB",
@@ -3133,7 +3378,8 @@
       "away_team": "LA",
       "home_team": "TB",
       "stadium": "Raymond James Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Tampa, FL"
     },
     {
       "game_id": "2026_17_MIN_NYJ",
@@ -3145,7 +3391,8 @@
       "away_team": "MIN",
       "home_team": "NYJ",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_17_NO_ATL",
@@ -3157,7 +3404,8 @@
       "away_team": "NO",
       "home_team": "ATL",
       "stadium": "Mercedes-Benz Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Atlanta, GA"
     },
     {
       "game_id": "2026_17_NYG_DAL",
@@ -3169,7 +3417,8 @@
       "away_team": "NYG",
       "home_team": "DAL",
       "stadium": "AT&T Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Arlington, TX"
     },
     {
       "game_id": "2026_17_PIT_TEN",
@@ -3181,7 +3430,8 @@
       "away_team": "PIT",
       "home_team": "TEN",
       "stadium": "Nissan Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Nashville, TN"
     },
     {
       "game_id": "2026_17_SEA_CAR",
@@ -3193,7 +3443,8 @@
       "away_team": "SEA",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_17_WAS_JAX",
@@ -3205,7 +3456,8 @@
       "away_team": "WAS",
       "home_team": "JAX",
       "stadium": "EverBank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Jacksonville, FL"
     },
     {
       "game_id": "2026_17_LV_ARI",
@@ -3217,7 +3469,8 @@
       "away_team": "LV",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_17_DET_CHI",
@@ -3229,7 +3482,8 @@
       "away_team": "DET",
       "home_team": "CHI",
       "stadium": "Soldier Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Chicago, IL"
     },
     {
       "game_id": "2026_17_PHI_SF",
@@ -3241,7 +3495,8 @@
       "away_team": "PHI",
       "home_team": "SF",
       "stadium": "Levi's Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Santa Clara, CA"
     },
     {
       "game_id": "2026_17_HOU_GB",
@@ -3253,7 +3508,8 @@
       "away_team": "HOU",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_18_ATL_CAR",
@@ -3265,7 +3521,8 @@
       "away_team": "ATL",
       "home_team": "CAR",
       "stadium": "Bank of America Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Charlotte, NC"
     },
     {
       "game_id": "2026_18_CHI_MIN",
@@ -3277,7 +3534,8 @@
       "away_team": "CHI",
       "home_team": "MIN",
       "stadium": "U.S. Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Minneapolis, MN"
     },
     {
       "game_id": "2026_18_CLE_CIN",
@@ -3289,7 +3547,8 @@
       "away_team": "CLE",
       "home_team": "CIN",
       "stadium": "Paycor Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Cincinnati, OH"
     },
     {
       "game_id": "2026_18_DAL_WAS",
@@ -3301,7 +3560,8 @@
       "away_team": "DAL",
       "home_team": "WAS",
       "stadium": "Northwest Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Landover, MD"
     },
     {
       "game_id": "2026_18_DET_GB",
@@ -3313,7 +3573,8 @@
       "away_team": "DET",
       "home_team": "GB",
       "stadium": "Lambeau Field",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Green Bay, WI"
     },
     {
       "game_id": "2026_18_JAX_IND",
@@ -3325,7 +3586,8 @@
       "away_team": "JAX",
       "home_team": "IND",
       "stadium": "Lucas Oil Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Indianapolis, IN"
     },
     {
       "game_id": "2026_18_LAC_DEN",
@@ -3337,7 +3599,8 @@
       "away_team": "LAC",
       "home_team": "DEN",
       "stadium": "Empower Field at Mile High",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Denver, CO"
     },
     {
       "game_id": "2026_18_LV_KC",
@@ -3349,7 +3612,8 @@
       "away_team": "LV",
       "home_team": "KC",
       "stadium": "GEHA Field at Arrowhead Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Kansas City, MO"
     },
     {
       "game_id": "2026_18_MIA_NE",
@@ -3361,7 +3625,8 @@
       "away_team": "MIA",
       "home_team": "NE",
       "stadium": "Gillette Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Foxborough, MA"
     },
     {
       "game_id": "2026_18_NYJ_BUF",
@@ -3373,7 +3638,8 @@
       "away_team": "NYJ",
       "home_team": "BUF",
       "stadium": "Highmark Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Orchard Park, NY"
     },
     {
       "game_id": "2026_18_PHI_NYG",
@@ -3385,7 +3651,8 @@
       "away_team": "PHI",
       "home_team": "NYG",
       "stadium": "MetLife Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "East Rutherford, NJ"
     },
     {
       "game_id": "2026_18_PIT_BAL",
@@ -3397,7 +3664,8 @@
       "away_team": "PIT",
       "home_team": "BAL",
       "stadium": "M&T Bank Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Baltimore, MD"
     },
     {
       "game_id": "2026_18_SEA_LA",
@@ -3409,7 +3677,8 @@
       "away_team": "SEA",
       "home_team": "LA",
       "stadium": "SoFi Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Inglewood, CA"
     },
     {
       "game_id": "2026_18_SF_ARI",
@@ -3421,7 +3690,8 @@
       "away_team": "SF",
       "home_team": "ARI",
       "stadium": "State Farm Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Glendale, AZ"
     },
     {
       "game_id": "2026_18_TB_NO",
@@ -3433,7 +3703,8 @@
       "away_team": "TB",
       "home_team": "NO",
       "stadium": "Caesars Superdome",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "New Orleans, LA"
     },
     {
       "game_id": "2026_18_TEN_HOU",
@@ -3445,7 +3716,8 @@
       "away_team": "TEN",
       "home_team": "HOU",
       "stadium": "Reliant Stadium",
-      "neutral": false
+      "neutral": false,
+      "venue_location": "Houston, TX"
     }
   ],
   "retrieved_at": "2026-10-16T16:15:42+00:00"
