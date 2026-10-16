@@ -48,7 +48,8 @@ with sync_playwright() as p:
             values = [v['v'] for v in points]
             lower = dimension.startswith('def') or dimension == 'st_opponent'
             assert values == sorted(values, reverse=not lower)
-            assert all(a['x'] <= b['x'] for a,b in zip(points, points[1:]))
+            assert all(a['x'] >= b['x'] for a,b in zip(points, points[1:]))
+            assert page.locator('.endlabel').all_text_contents() == ['WORST', 'BEST']
             # Every dot uses one linear scale: value differences map exactly to x differences.
             slope = (points[-1]['x'] - points[0]['x']) / (points[-1]['v'] - points[0]['v'])
             for point in points:
