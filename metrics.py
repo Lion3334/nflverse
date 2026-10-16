@@ -43,3 +43,70 @@ def ratings(pbp, season, week, teams):
         pl.col(key).rank(method="min", descending=not key.startswith("def")).alias(key + "_rank")
         for key in METRICS
     ])
+
+
+DIMENSIONS = {
+    "off_pass": ("Offense — Pass", "posteam", "pass", False),
+    "off_rush": ("Offense — Rush", "posteam", "rush", False),
+    "off_total": ("Offense — Total", "posteam", None, False),
+    "def_pass": ("Defense — Pass", "defteam", "pass", True),
+    "def_rush": ("Defense — Rush", "defteam", "rush", True),
+    "def_total": ("Defense — Total", "defteam", None, True),
+    "st_possession": ("Special Teams — Possession team", "posteam", "st", False),
+    "st_opponent": ("Special Teams — Opponent", "defteam", "st", True),
+}
+MEASURES = {"total_epa": "Total EPA", "epa_per_play": "EPA/play", "epa_per_game": "EPA/game"}
+
+
+def leaderboard(pbp, schedule, season=2026, through_week=5):
+    """Long-form team ratings, inclusive cutoff, denominator = all games played.
+
+    ST possession/opponent describe nflverse posteam/defteam, not fixed kicking
+    and receiving units. Opponent-side EPA is allowed, retaining its raw sign.
+    """
+    history = pbp.filter((pl.col("season") == season) & (pl.col("week") <= through_week)
+                         & (pl.col("season_type") == "REG"))
+    regular = schedule.filter((pl.col("season") == season) & (pl.col("game_type") == "REG"))
+    completed = regular.filter((pl.col("week") <= through_week)
+                              & pl.col("home_score").is_not_null()
+                              & pl.col("away_score").is_not_null())
+    teams = pl.concat([regular.select(pl.col(side).alias("team"))
+                       for side in ["home_team", "away_team"]]).unique().sort("team")
+    played = pl.concat([completed.select(pl.col(side).alias("team"), "game_id")
+                        for side in ["home_team", "away_team"]]).unique()
+    games = played.group_by("team").len(name="games")
+    # Ignore partial games: only aggregate games marked completed in schedules.
+    history = history.join(completed.select("game_id").unique(), on="game_id", how="semi")
+    base = teams.join(games, on="team", how="left").with_columns(pl.col("games").fill_null(0))
+    frames = []
+    for key, (label, side, kind, lower_better) in DIMENSIONS.items():
+        condition = (pl.col("play_type").is_in(ST_TYPES) & pl.col("epa").is_not_null()
+                     if kind == "st" else scrimmage_filter())
+        if kind in ("pass", "rush"):
+            condition &= pl.col(kind) == 1
+        totals = history.filter(condition & pl.col(side).is_not_null()).group_by(side).agg(
+            pl.col("epa").sum().alias("total_epa"), pl.len().alias("plays")
+        ).rename({side: "team"})
+        frame = base.join(totals, on="team", how="left").with_columns(
+            pl.col("total_epa").fill_null(0), pl.col("plays").fill_null(0)
+        ).with_columns(
+            pl.when(pl.col("plays") > 0).then(pl.col("total_epa") / pl.col("plays")).alias("epa_per_play"),
+            pl.when(pl.col("games") > 0).then(pl.col("total_epa") / pl.col("games")).alias("epa_per_game"),
+            pl.lit(key).alias("dimension"), pl.lit(label).alias("label"),
+        ).with_columns([
+            # No rank for a team with no completed games.
+            pl.when(pl.col("games") > 0).then(pl.col(measure)).rank(
+                method="min", descending=not lower_better).alias(measure + "_rank")
+            for measure in MEASURES
+        ])
+        frames.append(frame)
+    return pl.concat(frames)
+
+
+def missing_games(pbp, schedule, season=2026, through_week=5):
+    expected = schedule.filter((pl.col("season") == season) & (pl.col("game_type") == "REG")
+        & (pl.col("week") <= through_week) & pl.col("home_score").is_not_null()
+        & pl.col("away_score").is_not_null()).select("game_id").unique()
+    actual = pbp.filter((pl.col("season") == season) & (pl.col("season_type") == "REG")
+                       & (pl.col("week") <= through_week)).select("game_id").unique()
+    return expected.join(actual, on="game_id", how="anti")["game_id"].to_list()
