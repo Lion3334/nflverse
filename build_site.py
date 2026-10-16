@@ -26,7 +26,11 @@ def build():
         if hashlib.sha256(image).hexdigest() != manifest['logos'][team]['sha256']:
             raise ValueError(f'Logo checksum mismatch: {team}')
         logos[team] = 'data:image/png;base64,' + base64.b64encode(image).decode('ascii')
-    payload = json.dumps({'rows': rows, 'source': note, 'logos': logos}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
+    schedule = json.loads((ROOT / 'reports/schedule_2026.json').read_text())
+    schedule_teams = {g[side] for g in schedule['games'] for side in ('away_team', 'home_team')}
+    if not schedule_teams.issubset(logos):
+        raise ValueError('Missing logos for scheduled teams')
+    payload = json.dumps({'rows': rows, 'source': note, 'logos': logos, 'schedule': schedule}, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c')
     template = (ROOT / 'web/index.template.html').read_text()
     output = ROOT / 'docs/index.html'
     output.parent.mkdir(exist_ok=True)

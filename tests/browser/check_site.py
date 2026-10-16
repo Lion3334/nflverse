@@ -24,6 +24,7 @@ with sync_playwright() as p:
     errors = []
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.goto(url)
+    page.locator('[data-view="leaderboards"]').click()
     assert page.locator('[data-metric="epa_per_play"]').get_attribute('aria-pressed') == 'true'
     assert page.locator('.team-icon').count() == 32
     assert page.locator('.point image').count() == 32

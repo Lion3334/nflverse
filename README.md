@@ -1,8 +1,10 @@
-# NFL EPA Leaderboards
+# NFL EPA Lab
 
-A standalone HTML site with eight dimension tabs, three metric toggles (EPA/play by default), and a horizontal team-distance plot above each table. Best teams are always on the right; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Real team logos appear in the plot and table, with names and abbreviations for clarity. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
+A standalone HTML site with **Matchups** as the default view and **EPA Leaderboards** as a second top-level section. The leaderboard has eight dimension tabs, three metric toggles (EPA/play by default), and a horizontal team-distance plot above each table. Best teams are always on the right; defensive EPA allowed reverses the numeric direction. Team labels retain exact EPA coordinates, with vertical separation only to avoid overlaps. Real team logos appear in the plot and table, with names and abbreviations for clarity. Select a team in the plot or table to highlight it. View state is saved in the URL fragment for sharing.
 
-![Leaderboard site preview](docs/preview.png)
+![Matchups site preview](docs/matchups-preview.png)
+
+[Leaderboard preview](docs/preview.png)
 
 ## Open the HTML site
 
@@ -16,15 +18,23 @@ python -m http.server 8000 --directory docs
 
 For a hosted site, enable **Settings → Pages → Deploy from a branch → main → /docs** in this GitHub repository. The files are ready for Pages, but pushing them does not enable hosting.
 
+## Matchups and the current week
+
+The published 2026 schedule currently has **272 regular-season games across all 18 weeks**. Select a week, step backward/forward, or return to the current week. Games are grouped by the visitor's local calendar date and ordered by kickoff; times include the visitor's timezone abbreviation. Each game shows team logos, away/home roles, and venue. Bye teams are listed below the slate.
+
+The opening week is calculated in the browser at visit time, not at build time. NFL weeks roll over **Tuesday at midnight America/New_York**, using the first scheduled game of each week to locate that Tuesday. October 16, 2026 selects Week 6. Before the season, Week 1 is selected; after the published season, the final week is selected. Explicit week links preserve the chosen week. The page also checks for a new week while left open.
+
+The schedule is a snapshot, not a live feed. Refresh and rebuild for flex scheduling changes. Unknown kickoff times stay TBD; playoff rounds are included once published by the source. This schedule view does not apply the fixed Week 5 EPA snapshot to historical or future matchups. Leaderboards retain their separate Week 5 scope. Old leaderboard links still work.
+
 ## Rebuild the site
 
 ```sh
 python build_site.py
 ```
 
-The builder uses the committed CSV snapshot and export provenance in `reports/` and `web/index.template.html`, producing the self-contained `docs/index.html`. To refresh the data, run the export command below and then rebuild. Edit the template rather than the generated HTML.
+The builder uses the committed EPA CSV, schedule JSON, and export provenance in `reports/` and `web/index.template.html`, producing the self-contained `docs/index.html`. To refresh the data, run the export command below and then rebuild. Edit the template rather than the generated HTML.
 
-Team EPA for the **2026 regular season, through Week 5 inclusive**. The current dashboard focuses on leaderboards; matchup work is paused.
+Team EPA remains scoped to the **2026 regular season, through Week 5 inclusive**.
 
 [View all eight leaderboards and actual values](reports/epa_2026_through_week_5.md) or [download the full CSV](reports/epa_2026_through_week_5.csv).
 
@@ -48,12 +58,13 @@ Data loads through nflreadpy, refreshed hourly or through the sidebar button. Ig
 ## Export and validate
 
 ```sh
-.venv/bin/python export_leaderboards.py
+.venv/bin/python export_leaderboards.py  # Only when refreshing the Week 5 EPA snapshot
+.venv/bin/python export_schedule.py     # Refresh the season schedule independently
 python build_site.py
 .venv/bin/pytest -q
 ```
 
-Export produces the reviewable Markdown and CSV snapshots under `reports/`. These are actual source data, unlike the older fabricated HTML design studies in `prototypes/`. The earlier pregame aggregation API remains in `metrics.py` for future matchup work.
+Exports produce the reviewable Markdown/CSV EPA snapshots and `schedule_2026.json` under `reports/`. Kickoff timestamps are converted from nflverse Eastern game times to explicit UTC instants, including daylight saving time, before bundling. These are actual source data, unlike the older fabricated HTML design studies in `prototypes/`. The earlier pregame aggregation API remains in `metrics.py` for future matchup work.
 
 ## Browser validation
 
@@ -61,9 +72,12 @@ Export produces the reviewable Markdown and CSV snapshots under `reports/`. Thes
 .venv/bin/pip install -e ".[dev,browser]"
 # Requires system Chromium on PATH (or install Chromium for this machine).
 .venv/bin/python tests/browser/check_site.py
+.venv/bin/python tests/browser/check_matchups.py
 ```
 
-The browser check serves the static site temporarily and verifies all 24 dimension/metric combinations, exact linear horizontal positions, label separation, correct sorting, keyboard interaction, team highlighting, CSV download, URL state, and mobile overflow.
+The leaderboard browser check serves the static site temporarily and verifies all 24 dimension/metric combinations, exact linear horizontal positions, label separation, correct sorting, keyboard interaction, team highlighting, CSV download, URL state, and mobile overflow.
+
+The matchup browser check covers all 272 games and 18 weeks, chronological ordering, every week rollover including DST, default Week 6, pre/post-season bounds, explicit-week links, week navigation, local kickoff times in Los Angeles and Tokyo, mobile layout, and backward-compatible leaderboard links.
 
 ## Logos
 
