@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provider": "Open-Meteo",
-  "attempted_at": "2026-10-16T19:55:18+00:00",
+  "attempted_at": "2026-10-20T15:58:51+00:00",
   "forecast_days": 16,
   "games": {
     "2026_01_NE_SEA": {
@@ -743,7 +743,7 @@
       "latitude": 51.556,
       "longitude": -0.2796,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_BAL_CLE": {
       "stadium": "Huntington Bank Field",
@@ -764,7 +764,7 @@
       "latitude": 41.5061,
       "longitude": -81.6995,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_CAR_PHI": {
       "stadium": "Lincoln Financial Field",
@@ -785,7 +785,7 @@
       "latitude": 39.9008,
       "longitude": -75.1675,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_CHI_ATL": {
       "stadium": "Mercedes-Benz Stadium",
@@ -806,7 +806,7 @@
       "latitude": 33.7554,
       "longitude": -84.4008,
       "roof": "retractable",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_NO_NYG": {
       "stadium": "MetLife Stadium",
@@ -827,7 +827,7 @@
       "latitude": 40.8135,
       "longitude": -74.0745,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_NYJ_NE": {
       "stadium": "Gillette Stadium",
@@ -848,7 +848,7 @@
       "latitude": 42.0909,
       "longitude": -71.2643,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_PIT_TB": {
       "stadium": "Raymond James Stadium",
@@ -869,7 +869,7 @@
       "latitude": 27.9759,
       "longitude": -82.5033,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_TEN_IND": {
       "stadium": "Lucas Oil Stadium",
@@ -890,7 +890,7 @@
       "latitude": 39.7601,
       "longitude": -86.1639,
       "roof": "retractable",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_ARI_LA": {
       "stadium": "SoFi Stadium",
@@ -911,7 +911,7 @@
       "latitude": 33.9535,
       "longitude": -118.3392,
       "roof": "covered_open_sides",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_BUF_LV": {
       "stadium": "Allegiant Stadium",
@@ -932,7 +932,7 @@
       "latitude": 36.0909,
       "longitude": -115.1833,
       "roof": "indoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_LAC_KC": {
       "stadium": "GEHA Field at Arrowhead Stadium",
@@ -953,7 +953,7 @@
       "latitude": 39.0489,
       "longitude": -94.4839,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_DAL_GB": {
       "stadium": "Lambeau Field",
@@ -974,7 +974,7 @@
       "latitude": 44.5013,
       "longitude": -88.0622,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_06_WAS_SF": {
       "stadium": "Levi's Stadium",
@@ -995,22 +995,22 @@
       "latitude": 37.403,
       "longitude": -121.97,
       "roof": "outdoor",
-      "status": "available"
+      "status": "saved_pregame"
     },
     "2026_07_NE_CHI": {
       "stadium": "Soldier Field",
       "kickoff": "2026-10-23T00:15:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-23T00:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 66.9,
-        "feels_like_f": 62.3,
-        "precipitation_probability": 1,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 61.7,
+        "feels_like_f": 57.7,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
         "weather_code": 0,
-        "wind_mph": 4.6,
-        "gust_mph": 7.6,
-        "wind_direction_degrees": 209,
+        "wind_mph": 5.0,
+        "gust_mph": 7.8,
+        "wind_direction_degrees": 77,
         "conditions": "Clear"
       },
       "latitude": 41.8623,
@@ -1023,16 +1023,16 @@
       "kickoff": "2026-10-25T13:30:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T13:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 57.9,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 61.4,
         "feels_like_f": 54.1,
-        "precipitation_probability": 9,
+        "precipitation_probability": 62,
         "precipitation_inches": 0.0,
-        "weather_code": 3,
-        "wind_mph": 7.1,
-        "gust_mph": 17.0,
-        "wind_direction_degrees": 172,
-        "conditions": "Overcast"
+        "weather_code": 1,
+        "wind_mph": 13.4,
+        "gust_mph": 28.4,
+        "wind_direction_degrees": 291,
+        "conditions": "Mostly clear"
       },
       "latitude": 48.9245,
       "longitude": 2.3601,
@@ -1044,15 +1044,15 @@
       "kickoff": "2026-10-25T17:00:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T17:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 58.0,
-        "feels_like_f": 51.9,
-        "precipitation_probability": 4,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 63.8,
+        "feels_like_f": 59.9,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
         "weather_code": 0,
-        "wind_mph": 6.9,
-        "gust_mph": 16.1,
-        "wind_direction_degrees": 36,
+        "wind_mph": 5.5,
+        "gust_mph": 8.7,
+        "wind_direction_degrees": 192,
         "conditions": "Clear"
       },
       "latitude": 39.278,
@@ -1065,16 +1065,16 @@
       "kickoff": "2026-10-25T17:00:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T17:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 74.9,
-        "feels_like_f": 72.1,
-        "precipitation_probability": 3,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 72.3,
+        "feels_like_f": 69.4,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
-        "weather_code": 1,
-        "wind_mph": 6.9,
-        "gust_mph": 2.2,
-        "wind_direction_degrees": 199,
-        "conditions": "Mostly clear"
+        "weather_code": 2,
+        "wind_mph": 3.5,
+        "gust_mph": 4.3,
+        "wind_direction_degrees": 207,
+        "conditions": "Partly cloudy"
       },
       "latitude": 36.1665,
       "longitude": -86.7713,
@@ -1086,15 +1086,15 @@
       "kickoff": "2026-10-25T17:00:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T17:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
         "temperature_f": 55.2,
-        "feels_like_f": 49.7,
-        "precipitation_probability": 13,
+        "feels_like_f": 45.2,
+        "precipitation_probability": 14,
         "precipitation_inches": 0.0,
         "weather_code": 3,
-        "wind_mph": 8.4,
-        "gust_mph": 10.7,
-        "wind_direction_degrees": 299,
+        "wind_mph": 10.0,
+        "gust_mph": 16.6,
+        "wind_direction_degrees": 316,
         "conditions": "Overcast"
       },
       "latitude": 44.9738,
@@ -1107,15 +1107,15 @@
       "kickoff": "2026-10-25T17:00:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T17:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 55.5,
-        "feels_like_f": 47.9,
-        "precipitation_probability": 5,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 63.1,
+        "feels_like_f": 57.3,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
         "weather_code": 0,
-        "wind_mph": 8.5,
-        "gust_mph": 13.0,
-        "wind_direction_degrees": 27,
+        "wind_mph": 7.9,
+        "gust_mph": 11.4,
+        "wind_direction_degrees": 238,
         "conditions": "Clear"
       },
       "latitude": 40.8135,
@@ -1128,16 +1128,16 @@
       "kickoff": "2026-10-25T17:00:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T17:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 81.6,
-        "feels_like_f": 80.9,
-        "precipitation_probability": 5,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 76.5,
+        "feels_like_f": 75.4,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
-        "weather_code": 0,
-        "wind_mph": 9.8,
-        "gust_mph": 11.4,
-        "wind_direction_degrees": 110,
-        "conditions": "Clear"
+        "weather_code": 3,
+        "wind_mph": 9.2,
+        "gust_mph": 11.2,
+        "wind_direction_degrees": 93,
+        "conditions": "Overcast"
       },
       "latitude": 29.6847,
       "longitude": -95.4107,
@@ -1149,15 +1149,15 @@
       "kickoff": "2026-10-25T17:00:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T17:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 67.7,
-        "feels_like_f": 63.7,
-        "precipitation_probability": 1,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 67.6,
+        "feels_like_f": 61.8,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
         "weather_code": 0,
-        "wind_mph": 8.5,
-        "gust_mph": 13.0,
-        "wind_direction_degrees": 88,
+        "wind_mph": 10.0,
+        "gust_mph": 14.8,
+        "wind_direction_degrees": 74,
         "conditions": "Clear"
       },
       "latitude": 33.7554,
@@ -1170,15 +1170,15 @@
       "kickoff": "2026-10-25T17:00:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T17:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 63.8,
-        "feels_like_f": 59.4,
-        "precipitation_probability": 3,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 65.5,
+        "feels_like_f": 61.1,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
         "weather_code": 0,
-        "wind_mph": 7.4,
-        "gust_mph": 25.5,
-        "wind_direction_degrees": 41,
+        "wind_mph": 6.9,
+        "gust_mph": 8.7,
+        "wind_direction_degrees": 54,
         "conditions": "Clear"
       },
       "latitude": 35.2258,
@@ -1191,16 +1191,16 @@
       "kickoff": "2026-10-25T20:05:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T20:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 78.9,
-        "feels_like_f": 74.7,
-        "precipitation_probability": 1,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 80.2,
+        "feels_like_f": 77.6,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
-        "weather_code": 1,
-        "wind_mph": 5.2,
-        "gust_mph": 4.9,
-        "wind_direction_degrees": 70,
-        "conditions": "Mostly clear"
+        "weather_code": 0,
+        "wind_mph": 4.4,
+        "gust_mph": 4.7,
+        "wind_direction_degrees": 30,
+        "conditions": "Clear"
       },
       "latitude": 33.5276,
       "longitude": -112.2626,
@@ -1212,16 +1212,16 @@
       "kickoff": "2026-10-25T20:25:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T20:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 65.2,
-        "feels_like_f": 59.4,
-        "precipitation_probability": 3,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 71.8,
+        "feels_like_f": 66.7,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
-        "weather_code": 1,
-        "wind_mph": 8.1,
-        "gust_mph": 8.1,
-        "wind_direction_degrees": 166,
-        "conditions": "Mostly clear"
+        "weather_code": 3,
+        "wind_mph": 7.8,
+        "gust_mph": 14.3,
+        "wind_direction_degrees": 221,
+        "conditions": "Overcast"
       },
       "latitude": 42.34,
       "longitude": -83.0456,
@@ -1233,15 +1233,15 @@
       "kickoff": "2026-10-25T20:25:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-25T20:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 68.5,
-        "feels_like_f": 64.7,
-        "precipitation_probability": 0,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 72.0,
+        "feels_like_f": 67.9,
+        "precipitation_probability": 1,
         "precipitation_inches": 0.0,
         "weather_code": 0,
-        "wind_mph": 5.4,
-        "gust_mph": 6.0,
-        "wind_direction_degrees": 52,
+        "wind_mph": 6.0,
+        "gust_mph": 8.9,
+        "wind_direction_degrees": 77,
         "conditions": "Clear"
       },
       "latitude": 36.0909,
@@ -1254,15 +1254,15 @@
       "kickoff": "2026-10-26T00:20:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-26T00:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 57.6,
-        "feels_like_f": 51.2,
-        "precipitation_probability": 8,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 54.8,
+        "feels_like_f": 47.5,
+        "precipitation_probability": 21,
         "precipitation_inches": 0.0,
         "weather_code": 0,
-        "wind_mph": 7.2,
-        "gust_mph": 6.7,
-        "wind_direction_degrees": 356,
+        "wind_mph": 8.5,
+        "gust_mph": 15.7,
+        "wind_direction_degrees": 358,
         "conditions": "Clear"
       },
       "latitude": 47.5952,
@@ -1275,16 +1275,16 @@
       "kickoff": "2026-10-27T00:15:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-27T00:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 57.7,
-        "feels_like_f": 51.5,
-        "precipitation_probability": 7,
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 60.8,
+        "feels_like_f": 57.5,
+        "precipitation_probability": 0,
         "precipitation_inches": 0.0,
-        "weather_code": 3,
-        "wind_mph": 5.4,
-        "gust_mph": 2.9,
-        "wind_direction_degrees": 218,
-        "conditions": "Overcast"
+        "weather_code": 1,
+        "wind_mph": 4.7,
+        "gust_mph": 13.2,
+        "wind_direction_degrees": 211,
+        "conditions": "Mostly clear"
       },
       "latitude": 39.9008,
       "longitude": -75.1675,
@@ -1296,16 +1296,16 @@
       "kickoff": "2026-10-30T00:15:00+00:00",
       "forecast": {
         "forecast_time": "2026-10-30T00:00:00+00:00",
-        "retrieved_at": "2026-10-16T19:55:18+00:00",
-        "temperature_f": 52.8,
-        "feels_like_f": 45.5,
-        "precipitation_probability": 10,
-        "precipitation_inches": 0.008,
-        "weather_code": 51,
-        "wind_mph": 13.8,
-        "gust_mph": 20.1,
-        "wind_direction_degrees": 279,
-        "conditions": "Light drizzle"
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 34.4,
+        "feels_like_f": 26.6,
+        "precipitation_probability": 7,
+        "precipitation_inches": 0.0,
+        "weather_code": 2,
+        "wind_mph": 7.3,
+        "gust_mph": 16.1,
+        "wind_direction_degrees": 281,
+        "conditions": "Partly cloudy"
       },
       "latitude": 44.5013,
       "longitude": -88.0622,
@@ -1315,119 +1315,275 @@
     "2026_08_ARI_DAL": {
       "stadium": "AT&T Stadium",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 66.0,
+        "feels_like_f": 63.7,
+        "precipitation_probability": 6,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 4.8,
+        "gust_mph": 4.7,
+        "wind_direction_degrees": 158,
+        "conditions": "Overcast"
+      },
       "latitude": 32.7473,
       "longitude": -97.0945,
       "roof": "retractable",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_ATL_TB": {
       "stadium": "Raymond James Stadium",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 80.9,
+        "feels_like_f": 81.1,
+        "precipitation_probability": 10,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 6.5,
+        "gust_mph": 6.9,
+        "wind_direction_degrees": 86,
+        "conditions": "Overcast"
+      },
       "latitude": 27.9759,
       "longitude": -82.5033,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_BAL_BUF": {
       "stadium": "Highmark Stadium",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 45.4,
+        "feels_like_f": 37.3,
+        "precipitation_probability": 10,
+        "precipitation_inches": 0.004,
+        "weather_code": 51,
+        "wind_mph": 14.3,
+        "gust_mph": 26.8,
+        "wind_direction_degrees": 260,
+        "conditions": "Light drizzle"
+      },
       "latitude": 42.7747,
       "longitude": -78.7936,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_CLE_PIT": {
       "stadium": "Acrisure Stadium",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 52.2,
+        "feels_like_f": 43.0,
+        "precipitation_probability": 10,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 10.4,
+        "gust_mph": 16.6,
+        "wind_direction_degrees": 245,
+        "conditions": "Overcast"
+      },
       "latitude": 40.4468,
       "longitude": -80.0158,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_IND_JAX": {
       "stadium": "EverBank Stadium",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 79.6,
+        "feels_like_f": 79.3,
+        "precipitation_probability": 29,
+        "precipitation_inches": 0.0,
+        "weather_code": 1,
+        "wind_mph": 4.5,
+        "gust_mph": 4.7,
+        "wind_direction_degrees": 153,
+        "conditions": "Mostly clear"
+      },
       "latitude": 30.3239,
       "longitude": -81.6373,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_LV_NYJ": {
       "stadium": "MetLife Stadium",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 53.8,
+        "feels_like_f": 44.6,
+        "precipitation_probability": 10,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 10.7,
+        "gust_mph": 17.9,
+        "wind_direction_degrees": 239,
+        "conditions": "Overcast"
+      },
       "latitude": 40.8135,
       "longitude": -74.0745,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_MIN_DET": {
       "stadium": "Ford Field",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 47.0,
+        "feels_like_f": 39.7,
+        "precipitation_probability": 16,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 8.7,
+        "gust_mph": 23.3,
+        "wind_direction_degrees": 247,
+        "conditions": "Overcast"
+      },
       "latitude": 42.34,
       "longitude": -83.0456,
       "roof": "indoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_TEN_CIN": {
       "stadium": "Paycor Stadium",
       "kickoff": "2026-11-01T18:00:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T18:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 57.6,
+        "feels_like_f": 50.1,
+        "precipitation_probability": 19,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 7.0,
+        "gust_mph": 10.3,
+        "wind_direction_degrees": 253,
+        "conditions": "Clear"
+      },
       "latitude": 39.0954,
       "longitude": -84.516,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_LAC_LA": {
       "stadium": "SoFi Stadium",
       "kickoff": "2026-11-01T21:05:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T21:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 71.2,
+        "feels_like_f": 70.0,
+        "precipitation_probability": 11,
+        "precipitation_inches": 0.004,
+        "weather_code": 51,
+        "wind_mph": 9.2,
+        "gust_mph": 8.7,
+        "wind_direction_degrees": 206,
+        "conditions": "Light drizzle"
+      },
       "latitude": 33.9535,
       "longitude": -118.3392,
       "roof": "covered_open_sides",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_KC_DEN": {
       "stadium": "Empower Field at Mile High",
       "kickoff": "2026-11-01T21:25:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T21:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 64.8,
+        "feels_like_f": 59.0,
+        "precipitation_probability": 11,
+        "precipitation_inches": 0.0,
+        "weather_code": 0,
+        "wind_mph": 4.3,
+        "gust_mph": 4.0,
+        "wind_direction_degrees": 62,
+        "conditions": "Clear"
+      },
       "latitude": 39.7439,
       "longitude": -105.0201,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_NE_MIA": {
       "stadium": "Hard Rock Stadium",
       "kickoff": "2026-11-01T21:25:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-01T21:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 81.4,
+        "feels_like_f": 82.4,
+        "precipitation_probability": 20,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 12.6,
+        "gust_mph": 11.9,
+        "wind_direction_degrees": 70,
+        "conditions": "Overcast"
+      },
       "latitude": 25.958,
       "longitude": -80.2389,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_PHI_WAS": {
       "stadium": "Northwest Stadium",
       "kickoff": "2026-11-02T01:20:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-02T01:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 49.5,
+        "feels_like_f": 43.8,
+        "precipitation_probability": 10,
+        "precipitation_inches": 0.0,
+        "weather_code": 3,
+        "wind_mph": 3.2,
+        "gust_mph": 4.7,
+        "wind_direction_degrees": 231,
+        "conditions": "Overcast"
+      },
       "latitude": 38.9076,
       "longitude": -76.8645,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_08_CHI_SEA": {
       "stadium": "Lumen Field",
       "kickoff": "2026-11-03T01:15:00+00:00",
-      "forecast": null,
+      "forecast": {
+        "forecast_time": "2026-11-03T01:00:00+00:00",
+        "retrieved_at": "2026-10-20T15:58:51+00:00",
+        "temperature_f": 55.5,
+        "feels_like_f": 54.3,
+        "precipitation_probability": 32,
+        "precipitation_inches": 0.008,
+        "weather_code": 51,
+        "wind_mph": 4.3,
+        "gust_mph": 8.9,
+        "wind_direction_degrees": 183,
+        "conditions": "Light drizzle"
+      },
       "latitude": 47.5952,
       "longitude": -122.3316,
       "roof": "outdoor",
-      "status": "outside_horizon"
+      "status": "available"
     },
     "2026_09_JAX_BAL": {
       "stadium": "M&T Bank Stadium",
@@ -2791,7 +2947,8 @@
   },
   "coverage": {
     "available": 28,
-    "outside_horizon": 164,
-    "past_unavailable": 80
+    "outside_horizon": 151,
+    "past_unavailable": 80,
+    "saved_pregame": 13
   }
 }
