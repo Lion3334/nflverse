@@ -32,3 +32,11 @@ def test_incomplete_source_keeps_prior_snapshot():
     with pytest.raises(ValueError,match='non-null EPA'):
         validate_history(pbp.with_columns(pl.lit(None).alias('epa')),complete,6)
     validate_history(pbp,complete,6)
+
+
+def test_unready_source_is_distinguishable_from_hard_errors():
+    from weekly_epa import SourceNotReady
+    schedule = pl.DataFrame({'season':[2026], 'game_type':['REG'], 'week':[6],
+                             'game_id':['g'], 'home_score':[None], 'away_score':[7]})
+    with pytest.raises(SourceNotReady):
+        validate_history(pl.DataFrame(), schedule, 6)

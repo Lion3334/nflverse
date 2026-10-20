@@ -9,6 +9,10 @@ from export_leaderboards import write_reports
 ROOT = Path(__file__).resolve().parent
 
 
+class SourceNotReady(ValueError):
+    """Prior-week source data is incomplete; expected for a while after a Tuesday rollover."""
+
+
 def target_week(schedule, now):
     return max((w['week'] for w in schedule['weeks'] if w['game_type'] == 'REG'
                 and datetime.fromisoformat(w['end']) <= now), default=0)
@@ -19,13 +23,13 @@ def validate_history(pbp, schedule, through_week, season=2026):
     games = schedule.filter((pl.col('season') == season) & (pl.col('game_type') == 'REG')
                             & (pl.col('week') <= through_week))
     if not games.height or games.filter(pl.col('home_score').is_null() | pl.col('away_score').is_null()).height:
-        raise ValueError('Prior-week schedule still contains unfinished games; retaining previous EPA')
+        raise SourceNotReady('Prior-week schedule still contains unfinished games; retaining previous EPA')
     missing = missing_games(pbp, schedule, season, through_week)
     if missing:
-        raise ValueError(f'Missing completed-game play-by-play: {missing}')
+        raise SourceNotReady(f'Missing completed-game play-by-play: {missing}')
     usable = pbp.filter(pl.col('epa').is_not_null()).get_column('game_id').unique().to_list()
     if set(games['game_id'].to_list()) - set(usable):
-        raise ValueError('Completed games lack non-null EPA; retaining previous EPA')
+        raise SourceNotReady('Completed games lack non-null EPA; retaining previous EPA')
 
 
 def refresh(now=None):
@@ -54,4 +58,8 @@ def refresh(now=None):
 
 
 if __name__ == '__main__':
-    refresh()
+    try:
+        refresh()
+    except SourceNotReady as error:
+        # Retain the prior snapshot and let the next scheduled run retry; other errors fail the job.
+        print(f'::warning::EPA advance deferred: {error}')

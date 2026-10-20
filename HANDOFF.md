@@ -19,7 +19,7 @@ Current approved interface:
 
 ## Data contracts and limitations
 
-**EPA advances automatically after Tuesday rollover.** `weekly_epa.py` checks the completed prior week at the 4 a.m. Pacific refresh, retrying subsequent refreshes when source data is delayed. `reports/epa_snapshot.json` selects the latest immutable weekly CSV/Markdown archive. The builder embeds saved snapshots; historical matchups select the latest cutoff strictly before their week. Weeks without an earlier archive remain blank. Initial archive: Week 5. First planned advance: October 20, through Week 6. Corrected nflverse data is not original game-day data.
+**EPA advances automatically after Tuesday rollover.** `weekly_epa.py` runs from its own **Refresh NFL EPA** workflow (`refresh-epa.yml`, every 6 hours plus manual dispatch), independent of odds/weather, retrying on later runs when source data is delayed. `reports/epa_snapshot.json` selects the latest immutable weekly CSV/Markdown archive. The builder embeds saved snapshots; historical matchups select the latest cutoff strictly before their week. Weeks without an earlier archive remain blank. Initial archive: Week 5. First planned advance: October 20, through Week 6. Corrected nflverse data is not original game-day data.
 
 EPA calculations/ranks: `metrics.py`; export: `export_leaderboards.py`; report: `reports/epa_2026_through_week_5.csv` and matching Markdown. Raw `epa_per_play` remains for compatibility. EPA/game uses completed team games including games with no qualifying plays. ST possession/opponent are nflverse posteam/defteam roles, not fixed kicking/returning units: receiver possesses kickoffs; punter possesses punts. No opponent/garbage-time adjustments.
 
